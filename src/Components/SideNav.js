@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Drawer, IconButton, ListItemButton, ListItemIcon, ListItemText, List, Button, Tooltip, ClickAwayListener, Divider} from '@mui/material'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import { Link } from 'react-scroll';
 
 
 
@@ -34,9 +35,17 @@ const SideNav = () => {
             </ListItemIcon>
         </ListItemButton>
         <Divider/>
-        <ListItemButton>
+        <ListItemButton >
             <ListItemIcon>
-                <ListItemText>Rooms</ListItemText>
+            <Link
+                                    to="roomsid"
+                                    smooth={true}
+                                    duration={600}
+                                    onClick={()=>{setOpenDrawer(false)}}
+                                >
+                                    <ListItemText>Rooms</ListItemText>
+                                </Link>
+               
             </ListItemIcon>
         </ListItemButton>
         <Divider/>

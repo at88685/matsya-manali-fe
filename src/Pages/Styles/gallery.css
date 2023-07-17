@@ -1,0 +1,21 @@
+.gallery-container{
+height: fit-content;
+background-color: whitesmoke;
+}
+
+.carasoul-box{
+    height: 30rem;
+    margin-top: 2rem;
+    width: 80%;
+    background-color: aqua;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

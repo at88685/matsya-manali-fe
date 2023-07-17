@@ -36,3 +36,9 @@
     flex-direction: column;
     height: max-content;
   }
+
+  .footer-title{
+    color: white;
+    background-color: black;
+    font-size: 3rem;
+}
