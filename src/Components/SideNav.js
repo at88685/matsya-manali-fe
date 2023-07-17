@@ -31,7 +31,13 @@ const SideNav = () => {
     <List>
         <ListItemButton>
             <ListItemIcon>
-                <ListItemText>Home</ListItemText>
+            <Link
+                                    to="homeid"
+                                    smooth={true}
+                                    duration={600}
+                                    onClick={()=>{setOpenDrawer(false)}}
+                                >
+                <ListItemText>Home</ListItemText></Link>
             </ListItemIcon>
         </ListItemButton>
         <Divider/>
@@ -51,13 +57,25 @@ const SideNav = () => {
         <Divider/>
         <ListItemButton>
             <ListItemIcon>
-                <ListItemText>Services</ListItemText>
+            <Link
+                                    to="servicesid"
+                                    smooth={true}
+                                    duration={600}
+                                    onClick={()=>{setOpenDrawer(false)}}
+                                >
+                <ListItemText>Services</ListItemText></Link>
             </ListItemIcon>
         </ListItemButton>
         <Divider/>
         <ListItemButton>
             <ListItemIcon>
-                <ListItemText>Contact Us</ListItemText>
+            <Link
+                                    to="footerid"
+                                    smooth={true}
+                                    duration={600}
+                                    onClick={()=>{setOpenDrawer(false)}}
+                                >
+                <ListItemText>Contact Us</ListItemText></Link>
             </ListItemIcon>
         </ListItemButton>
         

@@ -9,7 +9,7 @@ import React from 'react'
 const Home = () => {
 
   return (
-    <div className="app">
+    <div className="app" id='homeid'>
       <video autoPlay muted loop className="video-background">
         <source src={frontVideo} type="video/mp4" />
         {/* Add additional <source> elements for different video formats (e.g., WebM, Ogg) */}

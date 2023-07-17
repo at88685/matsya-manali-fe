@@ -23,7 +23,7 @@ const Navbar = () => {
         setOpen(false);
     };
     return (
-        <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+        <AppBar position="fixed" sx={{ backgroundColor: 'white' }}>
             <Toolbar>
                 {isMatch ? <>
                     <Grid container>
@@ -49,8 +49,10 @@ const Navbar = () => {
                             <Tabs value={value} indicatorColor='secondary' color='inherit' onChange={(e, v) => { setValue(v) }}>
 
 
-
-                                <Tab label="Home"></Tab>
+<Link  to="homeid"
+                                    smooth={true}
+                                    duration={600}>
+                                <Tab label="Home" sx={{ color: 'black'}}></Tab></Link>
                                 <Link
                                     to="roomsid"
                                     smooth={true}
@@ -59,9 +61,14 @@ const Navbar = () => {
                                     <Tab label="Rooms" sx={{ color: 'black'}}></Tab>
                                 </Link>
 
-
-                                <Tab label="Services"></Tab>
-                                <Tab label="Contact Us"></Tab>
+<Link  to="servicesid"
+                                    smooth={true}
+                                    duration={600}>
+                                <Tab label="Services" sx={{ color: 'black'}}></Tab></Link>
+                                <Link to="footerid"
+                                    smooth={true}
+                                    duration={600} >
+                                <Tab label="Contact Us" sx={{ color: 'black'}}></Tab></Link>
                             </Tabs>
                         </Grid>
                         <Grid item xs={3} container sx={{ display: 'flex', justifyContent: 'end' }}>

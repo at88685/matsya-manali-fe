@@ -27,7 +27,7 @@ const Footer = () => {
   };
 
   return (
-    <footer style={footerStyle}>
+    <footer style={footerStyle} id='footerid'>
       <Container maxWidth="lg">
         <Grid container justifyContent="space-between" alignItems='center'>
           <Grid item xs={12} sm={6} md={6}>

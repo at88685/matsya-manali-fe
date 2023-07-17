@@ -4,7 +4,7 @@ import './Styles/services.css'
 const RoomServ = () => {
   return (
     <>
-    <div className='services-container'>
+    <div className='services-container' id='servicesid'>
 
     <Typography variant="h2" color="initial" sx={{ textAlign: 'center' }}>Services</Typography>
     <Grid container xs={12}>

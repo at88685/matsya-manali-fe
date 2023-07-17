@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Grid, Box, Typography } from '@mui/material'
-import { Carousel } from '@material-ui/lab';
+
 import './Styles/gallery.css'
-import images from "../Constants/images";
-import imagesList from '../Constants/images';
 
 const Gallery = () => {
 
