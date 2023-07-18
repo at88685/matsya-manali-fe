@@ -12,7 +12,6 @@ import { Link } from 'react-scroll';
 const Navbar = () => {
     const [value, setValue] = useState();
     const [open, setOpen] = useState(false);
-
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('md'))
     const handleClick = () => {
@@ -49,26 +48,26 @@ const Navbar = () => {
                             <Tabs value={value} indicatorColor='secondary' color='inherit' onChange={(e, v) => { setValue(v) }}>
 
 
-<Link  to="homeid"
+                                <Link to="homeid"
                                     smooth={true}
                                     duration={600}>
-                                <Tab label="Home" sx={{ color: 'black'}}></Tab></Link>
+                                    <Tab label="Home" sx={{ color: 'black' }}></Tab></Link>
                                 <Link
                                     to="roomsid"
                                     smooth={true}
                                     duration={600}
                                 >
-                                    <Tab label="Rooms" sx={{ color: 'black'}}></Tab>
+                                    <Tab label="Rooms" sx={{ color: 'black' }}></Tab>
                                 </Link>
 
-<Link  to="servicesid"
+                                <Link to="servicesid"
                                     smooth={true}
                                     duration={600}>
-                                <Tab label="Services" sx={{ color: 'black'}}></Tab></Link>
+                                    <Tab label="Services" sx={{ color: 'black' }}></Tab></Link>
                                 <Link to="footerid"
                                     smooth={true}
                                     duration={600} >
-                                <Tab label="Contact Us" sx={{ color: 'black'}}></Tab></Link>
+                                    <Tab label="Contact Us" sx={{ color: 'black' }}></Tab></Link>
                             </Tabs>
                         </Grid>
                         <Grid item xs={3} container sx={{ display: 'flex', justifyContent: 'end' }}>

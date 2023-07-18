@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Grid, Box, Typography } from '@mui/material'
-
+import Carousel from 'react-material-ui-carousel';
 import './Styles/gallery.css'
 
 const Gallery = () => {
@@ -45,16 +45,34 @@ const Gallery = () => {
             clearInterval(intervalId);
         };
     }, [images.length]);
+    const indicatorStyle = {
+        display: 'none',
+    };
     return (
         <div className='gallery-container'>
-
-            <Typography variant="h2" color="initial" sx={{ textAlign: 'center' }}>Gallery</Typography>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <div className='galleryText'>Gallery</div>
+                <div className="divider" ></div>
+            </div>
             <Grid container xs={12}>
                 <Grid item xs={12} md={4}>
                     <div className='gallery-item'>
                         <div className="subTitle">Inside View</div>
                         <Box className='carasoul-box'>
-                            <img src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+                            {/* <img src={images[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover' }} /> */}
+                            <Carousel navButtonsAlwaysVisible={false} autoPlay={true} indicatorIconButtonProps={{
+                                style: indicatorStyle,
+                            }}
+                            >
+                                {
+                                    images.map((item, index) => {
+                                        return (
+                                            <img src={item} al="image" style={{ objectFit: 'cover', borderRadius: '10px', height: '30rem' }} width="100%" />
+                                        )
+                                    }
+                                    )
+                                }
+                            </Carousel>
                         </Box>
                     </div>
 
@@ -63,7 +81,20 @@ const Gallery = () => {
                     <div className='gallery-item'>
                         <div className="subTitle">Outside View</div>
                         <Box className='carasoul-box'>
-                            <img src={images[currentImageIndex1]} alt={`Slide ${currentImageIndex1 + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+                            {/* <img src={images[currentImageIndex1]} alt={`Slide ${currentImageIndex1 + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover' }} /> */}
+                            <Carousel navButtonsAlwaysVisible={false} autoPlay={true} indicatorIconButtonProps={{
+                                style: indicatorStyle,
+                            }}
+                            >
+                                {
+                                    images.map((item, index) => {
+                                        return (
+                                            <img src={item} al="image" style={{ objectFit: 'cover', borderRadius: '10px', height: '30rem' }} width="100%" />
+                                        )
+                                    }
+                                    )
+                                }
+                            </Carousel>
                         </Box>
                     </div>
                 </Grid>
@@ -71,7 +102,20 @@ const Gallery = () => {
                     <div className='gallery-item'>
                         <div className="subTitle">Balcony View</div>
                         <Box className='carasoul-box'>
-                            <img src={images[currentImageIndex2]} alt={`Slide ${currentImageIndex2 + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
+                            {/* <img src={images[currentImageIndex2]} alt={`Slide ${currentImageIndex2 + 1}`} style={{ height: '100%', width: '100%', objectFit: 'cover' }} /> */}
+                            <Carousel navButtonsAlwaysVisible={false} autoPlay={true} indicatorIconButtonProps={{
+                                style: indicatorStyle,
+                            }}
+                            >
+                                {
+                                    images.map((item, index) => {
+                                        return (
+                                            <img src={item} al="image" style={{ objectFit: 'cover', borderRadius: '10px', height: '30rem' }} width="100%" />
+                                        )
+                                    }
+                                    )
+                                }
+                            </Carousel>
                         </Box>
                     </div>
                 </Grid>

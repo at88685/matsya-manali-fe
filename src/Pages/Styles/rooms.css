@@ -1,49 +1,86 @@
-.rooms-container{
-    min-height: 100vh;
-    background-color: whitesmoke;
+.rooms-container {
+  /* min-height: 100vh; */
+  background-color: whitesmoke;
 
 }
 
-.room-description{
-    font-family: Bacasime Antique, serif;
-    text-align: justify;
-    font-size: 1.5rem;
-    margin: 1rem;
+.room-description {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin: 1rem;
+  letter-spacing: 1;
+  font-family: Bacasime Antique, serif;
 }
 
-.room-title{
-    font-size: 3rem;
-    text-align: center;
-    padding: unset;
+.room-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: unset;
+  font-family: 'Cormorant Garamond', serif;
+
 }
 
-.image-box{
-  max-width: 30rem; 
+.image-box {
+  max-width: 30rem;
   max-height: 35rem;
   padding: 1rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.roomsText {
+  font-family: 'Ysabeau SC', sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem;
+
+}
+
+.divider {
+  height: 5px;
+  background-color: black;
+  width: 50%;
+  margin-top: 15px;
+}
+
+.roomAndDividerDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicesImages {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin-top: 1rem
+}
+
 .image-box img {
-    width: 100%; /* Set the image width to fill the container */
-    height: 100%; /* Set the image height to fill the container */
-    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  width: 100%;
+  /* Set the image width to fill the container */
+  height: 100%;
+  /* Set the image height to fill the container */
+  object-fit: cover;
+  /* Maintain aspect ratio and cover the entire container */
+}
+
+@media screen and (max-width: 768px) {
+  .room-description {
+    font-size: 1rem;
   }
 
-  @media screen and (max-width: 768px) {
-    .room-description {
-      font-size: 1rem;
-    }
-    .room-title{
-        font-size: 2rem;
-    }
+  .room-title {
+    font-size: 2rem;
   }
-  
-  @media screen and (max-width: 480px) {
-    .room-description {
-        font-size: .75rem;
-      }
-      .room-title{
-        font-size: 1.5rem;
-    }
+}
+
+@media screen and (max-width: 480px) {
+  .room-description {
+    font-size: .75rem;
   }
+
+  .room-title {
+    font-size: 1.5rem;
+  }
+}
