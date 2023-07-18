@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Styles/about.css'
-import { Box, Grid, Typography } from '@mui/material'
-import { motion, useAnimation } from "framer-motion";
+import { Box, Grid } from '@mui/material'
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
