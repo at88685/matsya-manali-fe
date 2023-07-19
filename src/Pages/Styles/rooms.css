@@ -1,5 +1,5 @@
 .rooms-container {
-  /* min-height: 100vh; */
+  min-height: fit-content;
   background-color: whitesmoke;
 
 }
@@ -71,16 +71,16 @@
   }
 
   .room-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .room-description {
-    font-size: .75rem;
+    font-size: .8rem;
   }
 
   .room-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }

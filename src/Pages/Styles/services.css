@@ -55,3 +55,25 @@
   width: 50%;
   margin-top: 15px;
 }
+
+@media screen and (max-width: 768px) {
+  .description {
+    font-size: 1rem;
+  }
+
+  .subTitle{
+    font-size: 1.5rem;
+  }
+
+ 
+}
+
+@media screen and (max-width: 480px) {
+  .description {
+    font-size: .8rem;
+  }
+
+  .subTitle{
+    font-size: 1.2rem;
+  }
+}

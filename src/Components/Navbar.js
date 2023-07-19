@@ -22,7 +22,7 @@ const Navbar = () => {
         setOpen(false);
     };
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: 'white' }}>
+        <AppBar position="fixed" sx={{ color: 'white' }}>
             <Toolbar>
                 {isMatch ? <>
                     <Grid container>
