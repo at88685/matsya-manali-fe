@@ -2,11 +2,9 @@ import React from "react";
 import { Grid } from "@mui/material";
 import "./Styles/gallery.css";
 import CarouselComponent from "../Components/CarouselComponent";
-
-import { InsideImagesList, OutsideImagesList,BalconyViewImagesList } from "../Constants/ImagesList";
+import { InsideImagesList, OutsideImagesList, BalconyViewImagesList } from "../Constants/ImagesList";
 
 const Gallery = () => {
-  
   return (
     <div className="gallery-container">
       <div
@@ -15,6 +13,7 @@ const Gallery = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: '40px'
         }}
       >
         <div className="galleryText">Gallery</div>
@@ -50,14 +49,13 @@ const Gallery = () => {
               </Carousel>
             </Box>
           </div> */}
-          <CarouselComponent imagesList={InsideImagesList} caption="Inside Image"/>
+          <CarouselComponent imagesList={InsideImagesList} caption="Inside View" />
         </Grid>
         <Grid item xs={12} md={4}>
-        <CarouselComponent imagesList={OutsideImagesList} caption="Outside Image"/>
-          
+          <CarouselComponent imagesList={OutsideImagesList} caption="Outside View" />
         </Grid>
         <Grid item xs={12} md={4}>
-        <CarouselComponent imagesList={BalconyViewImagesList} caption="Balcony View"/>
+          <CarouselComponent imagesList={BalconyViewImagesList} caption="Balcony View" />
         </Grid>
       </Grid>
       <div></div>

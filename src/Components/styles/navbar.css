@@ -1,44 +1,69 @@
 .head-title {
-    font-family: 'Avenir', sans-serif;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-align: start;
-    color: rgb(157, 66, 218);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Avenir', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: start;
+  color: rgb(157, 66, 218);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navBarTitle {
+  cursor: pointer;
+  font-size: 14;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  background-color: white;
+  /* border: 1px solid black; */
+}
+
+.bookingTitle {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .head-title {
+    font-size: 1rem;
   }
 
-  @media screen and (max-width: 768px) {
-    .head-title {
-      font-size: 1rem;
-    }
-    .title {
-      font-size: 1rem;
-    }
-  
-  }
-  
-  @media screen and (max-width: 480px) {
-    .head-title {
-      font-size: .75rem;
-    }
-    .title {
-      font-size: .75rem;
-    }
-  
+  .title {
+    font-size: 1rem;
   }
 
-  .tooltip{
-    padding: auto;
-    display: flex;
-    flex-direction: column;
-    height: max-content;
+}
+
+@media screen and (max-width: 480px) {
+  .head-title {
+    font-size: .75rem;
   }
 
-  .footer-title{
-    color: white;
-    background-color: black;
-    font-size: 3rem;
+  .title {
+    font-size: .75rem;
+  }
+
+}
+
+.tooltip {
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+.footer-title {
+  color: white;
+  background-color: black;
+  font-size: 3rem;
 }
