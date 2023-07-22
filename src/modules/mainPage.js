@@ -10,6 +10,7 @@ import Rooms from '../Pages/Rooms';
 import Gallery from '../Pages/Gallery';
 import RoomServ from '../Pages/RoomServ';
 import About from '../Pages/About';
+import Aminities from '../Pages/Amenities';
 import Footer from '../Components/Footer';
 
 const MainPage = () => {
@@ -19,6 +20,7 @@ const MainPage = () => {
             <Home />
             <Rooms />
             <RoomServ />
+            <Aminities />
             <Gallery />
             <About />
             <Footer />

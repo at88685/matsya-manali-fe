@@ -34,3 +34,20 @@ export const BalconyViewImagesList = [
     require('../assets/images/hotelImages/BalconyView/BalconyView9.jpg'),
     require('../assets/images/hotelImages/BalconyView/BalconyView10.jpg')
 ]
+
+export const roomImages = {
+    rohtangView: require('../assets/images/hotelImages/roomImages/rohtang.jpg'),
+    sohtangView: require('../assets/images/hotelImages/roomImages/solang.jpg'),
+    valleyView: require('../assets/images/hotelImages/roomImages/valley.jpg'),
+    duplexView: require('../assets/images/hotelImages/roomImages/duplex.jpg'),
+}
+
+export const images = {
+    parkingIcon: require("../assets/images/icons/parkingIcon.png"),
+    restrauntIcon: require("../assets/images/icons/restrauntIcon.png"),
+    wifiicon: require("../assets/images/icons/wifiIcon.png"),
+    panaromicViewIcon: require('../assets/images/icons/panaromicView.png'),
+    bonfireIcon: require('../assets/images/icons/bonfire.png'),
+    breakfastIcon: require('../assets/images/icons/breakfast.png'),
+    blackCircleIcon: require('../assets/images/icons/black-circle.png'),
+};

@@ -1,12 +1,12 @@
 .rooms-container {
   min-height: fit-content;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
 
 }
 
 .room-description {
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1rem;
   letter-spacing: 1;
   font-family: Bacasime Antique, serif;
@@ -18,21 +18,78 @@
   text-align: center;
   padding: unset;
   font-family: 'Cormorant Garamond', serif;
+}
 
+.valleyViewTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .image-box {
   max-width: 30rem;
   max-height: 35rem;
-  padding: 1rem;
+  padding: 0.5rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.specialRoomDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: aqua;
+}
+
+.special-room-image {
+  width: 70%;
+  height: 40rem;
+  margin-right: 5%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.duplexMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ourSpecialsContentsDiv {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rohtang-room-image {
+  width: 43%;
+  height: 30rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.valley-room-image {
+  width: 43%;
+  height: 30rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.solang-room-image {
+  width: 43%;
+  height: 30rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-right: 5%;
 }
 
 .roomsText {
   font-family: 'Ysabeau SC', sans-serif;
   font-weight: 800;
   font-size: 2.25rem;
-
 }
 
 .divider {
@@ -65,6 +122,204 @@
   /* Maintain aspect ratio and cover the entire container */
 }
 
+.ourSpecialsMainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.rohtangViewContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5rem;
+}
+
+.valleyViewContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 40px;
+}
+
+.solangViewContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 5rem;
+}
+
+.rohtangTextsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: 5%;
+}
+
+.valleyTextsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-right: 5%;
+}
+
+.solangTextsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.special-room-image:hover {
+  scale: 1.1;
+  transition: 2s;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0)0%,
+      rgba(136, 160, 255, 0.46)217.91%);
+  box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+}
+
+.solang-room-image:hover {
+  scale: 1.1;
+  transition: 2s;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0)0%,
+      rgba(136, 160, 255, 0.46)217.91%);
+  box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+}
+
+.valley-room-image:hover {
+  scale: 1.1;
+  transition: 2s;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0)0%,
+      rgba(136, 160, 255, 0.46)217.91%);
+  box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+}
+
+.rohtang-room-image:hover {
+  scale: 1.1;
+  transition: 2s;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0)0%,
+      rgba(136, 160, 255, 0.46)217.91%);
+  box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+}
+
+
+
+@media (max-width:1050px) {
+  .ourSpecialsContentsDiv {
+    flex-direction: column;
+  }
+
+  .special-room-image {
+    width: 100%;
+    margin-right: 0%;
+  }
+
+  .duplexMainDiv {
+    margin-top: 30px;
+  }
+
+}
+
+@media (max-width:1000px) {
+  .rohtang-room-image {
+    height: 25rem;
+  }
+
+  .solang-room-image {
+    height: 25rem;
+  }
+
+  .valley-room-image {
+    height: 25rem;
+  }
+
+  .special-room-image {
+    height: 35rem;
+  }
+}
+
+@media (max-width:900px) {
+  .valleyViewContainer {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .solangViewContainer {
+    flex-direction: column-reverse;
+  }
+
+  .rohtangViewContainer {
+    flex-direction: column;
+  }
+
+  .rooms-container {
+    margin-top: 30px;
+  }
+
+  .rohtangViewContainer {
+    margin-top: 0rem;
+  }
+
+  .solangViewContainer {
+    margin-top: 0rem;
+  }
+
+  .valley-room-image {
+    margin-top: 40px;
+    width: 75%;
+  }
+
+  .rohtang-room-image {
+    margin-top: 40px;
+    width: 75%;
+  }
+
+  .solang-room-image {
+    margin-top: 40px;
+    width: 75%;
+    margin-right: 0%;
+  }
+
+  .rohtangTextsDiv {
+    margin-top: 40px;
+    margin-right: 0%;
+  }
+
+  .solangTextsDiv {
+    margin-top: 40px;
+  }
+
+  .valleyTextsDiv {
+    margin-top: 40px;
+    margin-right: 0%;
+  }
+
+  .valleyViewContainer {
+    margin-top: 10px;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .room-description {
     font-size: 1rem;
@@ -72,6 +327,34 @@
 
   .room-title {
     font-size: 1.5rem;
+  }
+
+  .special-room-image {
+    height: 35rem;
+  }
+
+  .valley-room-image {
+    width: 90%;
+  }
+
+  .solang-room-image {
+    width: 90%;
+  }
+
+  .rohtang-room-image {
+    width: 90%;
+  }
+}
+
+@media(max-width:700px) {
+  .special-room-image {
+    height: 30rem;
+  }
+}
+
+@media(max-width:550px) {
+  .special-room-image {
+    height: 25rem;
   }
 }
 
@@ -82,5 +365,43 @@
 
   .room-title {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width:450px) {
+  .valley-room-image {
+    height: 20rem;
+  }
+
+  .solang-room-image {
+    height: 20rem;
+  }
+
+  .rohtang-room-image {
+    height: 20rem;
+  }
+}
+
+@media(max-width:400px) {
+  .special-room-image {
+    height: 20rem;
+  }
+
+  .rohtang-room-image {
+    height: 15rem;
+  }
+
+  .valley-room-image {
+    height: 15rem;
+  }
+
+  .solang-room-image {
+    height: 15rem;
+  }
+}
+
+@media(max-width:300px) {
+  .special-room-image {
+    height: 15rem;
   }
 }
