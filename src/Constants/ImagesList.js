@@ -51,3 +51,4 @@ export const images = {
     breakfastIcon: require('../assets/images/icons/breakfast.png'),
     blackCircleIcon: require('../assets/images/icons/black-circle.png'),
 };
+export const headerLogo = require('../assets/images/logo/2.png')

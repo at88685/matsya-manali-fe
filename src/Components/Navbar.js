@@ -1,16 +1,37 @@
 // import { Tabs, Tab } from '@mui/icons-material'
-import { AppBar, Button, Grid, Toolbar, Tooltip, ClickAwayListener, Tabs, Tab, Box, useTheme, useMediaQuery } from '@mui/material'
-import React, { useState } from 'react'
+import { AppBar, Button, Grid, Toolbar, Tooltip, ClickAwayListener, Tab, useTheme, useMediaQuery, styled } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import './styles/navbar.css'
 import SideNav from './SideNav';
 import { Link } from 'react-scroll';
+import { headerLogo } from '../Constants/ImagesList';
 
 
-
+const TransparentAppBar = styled(AppBar)(({ theme, isScrolled }) => ({
+    backgroundColor: isScrolled ? 'whitesmoke' : '#0000004D',
+    boxShadow: 'none',
+    '& img': isScrolled ? {
+        height: '5rem',
+        width: '5rem',
+    } : {
+        height: '6rem',
+        width: '6rem', 
+    },
+    '& .MuiTab-root': isScrolled ? {
+        color: 'black',
+        opacity: .7    
+    } :{
+        color: 'white',    
+    },
+    '& .MuiTab-root:hover':{
+        opacity: 1,
+    }
+    // Add any additional styles you need for the AppBar or its child elements here
+  }));
 
 
 const Navbar = () => {
-    const [value, setValue] = useState();
+    // const [value, setValue] = useState();
     const [open, setOpen] = useState(false);
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('md'))
@@ -21,85 +42,93 @@ const Navbar = () => {
     const handleClickAway = () => {
         setOpen(false);
     };
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrolled = scrollY >= window.innerHeight;
+      setIsScrolled(scrolled);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
     return (
-        <AppBar position="fixed" sx={{ color: 'white' }}>
+        <TransparentAppBar position="fixed" isScrolled={isScrolled}>
             <Toolbar>
                 {isMatch ? <>
                     <Grid container>
                         <Grid item xs={6}>
-                            <p className='head-title'>
-                                Matsya Manali
-                            </p>
+                        <div className='headerLogo'>
+                            <img src={headerLogo} alt="abc"></img>
+                            </div>
                         </Grid>
 
                     </Grid>
                     <Grid item xs={6}>
-                        <SideNav />
+                        <SideNav/>
                     </Grid>
 
                 </> :
                     <Grid container alignItems="center" >
                         <Grid item xs={3} sx={{ display: 'flex' }}>
-                            <p className='head-title'>
-                                Matsya Manali
-                            </p>
+                            <div className='headerLogo'>
+                            <img src={headerLogo} alt="abc"></img>
+                            </div>
+                        
                         </Grid>
-                        <Grid item xs={6} container justifyContent="center" spacing={2}>
-                            <Tabs value={value} indicatorColor='secondary' color='inherit' onChange={(e, v) => { setValue(v) }}>
-
-
+                        <Grid item xs={9} container justifyContent="end" spacing={2}>
+                           
                                 <Link to="homeid"
                                     smooth={true}
                                     duration={600}>
-                                    <Tab label="Home" sx={{ color: 'black' }}></Tab></Link>
+                                   <Tab label="Home"></Tab> </Link>
                                 <Link
                                     to="roomsid"
                                     smooth={true}
                                     duration={600}
                                 >
-                                    <Tab label="Rooms" sx={{ color: 'black' }}></Tab>
+                                    <Tab label="Rooms" ></Tab>
                                 </Link>
 
                                 <Link to="servicesid"
                                     smooth={true}
                                     duration={600}>
-                                    <Tab label="Services" sx={{ color: 'black' }}></Tab></Link>
+                                    <Tab label="Services" ></Tab></Link>
                                 <Link to="footerid"
                                     smooth={true}
                                     duration={600} >
-                                    <Tab label="Contact Us" sx={{ color: 'black' }}></Tab></Link>
-                            </Tabs>
+                                    <Tab label="Contact Us" ></Tab></Link>
+                                    <ClickAwayListener onClickAway={()=>(handleClickAway)}>
+                                   
+                                   <Tooltip
+                                       open={open}
+                                       onClose={() => setOpen(false)}
+                                       title={
+                                           <div className='tooltip'>
+                                               <Button variant="contained" color='secondary' onClick={handleClickAway} sx={{ marginTop: '1rem' }}>
+                                                   Agoda
+                                               </Button>
+                                               <Button sx={{ margin: '1rem 0' }} variant="contained" color='secondary' onClick={handleClickAway}>
+                                                   MakeMyTrip
+                                               </Button>
+                                           </div>
+                                       }
+                                   >  
+                                       <Tab label="Book Now" onClick={handleClick}></Tab>
+                                      
+                                       
+                                   </Tooltip>
+                           </ClickAwayListener>
                         </Grid>
-                        <Grid item xs={3} container sx={{ display: 'flex', justifyContent: 'end' }}>
-                            <Box >
-                                <ClickAwayListener onClickAway={handleClickAway}>
-                                    <div>
-                                        <Tooltip
-                                            open={open}
-                                            onClose={() => setOpen(false)}
-                                            title={
-                                                <div className='tooltip'>
-                                                    <Button variant="contained" color='secondary' onClick={handleClickAway} sx={{ marginTop: '1rem' }}>
-                                                        Agoda
-                                                    </Button>
-                                                    <Button sx={{ margin: '1rem 0' }} variant="contained" color='secondary' onClick={handleClickAway}>
-                                                        MakeMyTrip
-                                                    </Button>
-                                                </div>
-                                            }
-                                        >
-                                            <Button variant="contained" color='secondary' onClick={handleClick}>
-                                                Book Now
-                                            </Button>
-                                        </Tooltip>
-                                    </div>
-                                </ClickAwayListener>
-                            </Box>
-                        </Grid>
+                        
                     </Grid>}
 
             </Toolbar>
-        </AppBar>
+        </TransparentAppBar>
     )
 }
 

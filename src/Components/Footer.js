@@ -30,7 +30,7 @@ const Footer = () => {
     <footer style={footerStyle} id='footerid'>
       <Container maxWidth="lg">
         <Grid container justifyContent="space-between" alignItems='center'>
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid item xs={12} sm={6} md={4}>
             <Typography variant="body1" style={footerText}>
               Quick Links: &nbsp;
               <Link href="#" style={footerLink}>
@@ -47,9 +47,9 @@ const Footer = () => {
               </Link>
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} md={4}>
             <Typography variant="body1" style={footerText}>
-              Contact Us:
+              CONTACT US: 
               <div style={contactInfo}>
                 <div>123 Main Street</div>
                 <div>City, State 12345</div>
@@ -59,7 +59,14 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={4}>
-            {/* Add any additional content or components here */}
+          <Typography variant="body1" style={footerText}>
+              Social Links
+              <div style={contactInfo}>
+                <div>Instagram</div>
+                <div>Facebook</div>
+                <div>Gmail</div>
+              </div>
+            </Typography>
           </Grid>
         </Grid>
         <Grid container justifyContent="center" style={{ marginTop: '1rem' }}>
