@@ -1,5 +1,11 @@
 import React from 'react';
-import { Container, Grid, Typography, Link } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
+import './styles/footer.css'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
   const footerStyle = {
@@ -27,56 +33,42 @@ const Footer = () => {
   };
 
   return (
-    <footer style={footerStyle} id='footerid'>
-      <Container maxWidth="lg">
-        <Grid container justifyContent="space-between" alignItems='center'>
-          <Grid item xs={12} sm={6} md={4}>
-            <Typography variant="body1" style={footerText}>
-              Quick Links: &nbsp;
-              <Link href="#" style={footerLink}>
-                Home
-              </Link>
-              <Link href="#" style={footerLink}>
-                About Us
-              </Link>
-              <Link href="#" style={footerLink}>
-                Services
-              </Link>
-              <Link href="#" style={footerLink}>
-                Contact Us
-              </Link>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Typography variant="body1" style={footerText}>
-              CONTACT US: 
-              <div style={contactInfo}>
-                <div>123 Main Street</div>
-                <div>City, State 12345</div>
-                <div>Phone: (123) 456-7890</div>
-                <div>Email: info@example.com</div>
-              </div>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={4}>
-          <Typography variant="body1" style={footerText}>
-              Social Links
-              <div style={contactInfo}>
-                <div>Instagram</div>
-                <div>Facebook</div>
-                <div>Gmail</div>
-              </div>
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid container justifyContent="center" style={{ marginTop: '1rem' }}>
-          <Grid item>
-            <Typography variant="body2" align="center" style={footerText}>
-              © {new Date().getFullYear()} | Matsya Manali | All rights reserved.
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
+    <footer class="footer" id="footerid">
+      <div class="footer-content">
+
+        <div class="footer-sections">
+          <div class="contact-us">
+            <h3>Contact Us</h3>
+            <p>Matsya Manali, Burua, Palchan road,
+            </p>
+            <p> Manali, Himachal Pradesh - 175103</p>
+            <p>Email: matsyamanali@gmail.com</p>
+            <p>Landline: 1902-292342 | Phone: 6230766695 </p>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link"><InstagramIcon /></a>
+            <a href="#" class="social-link"><FacebookRoundedIcon /></a>
+            <a href="#" class="social-link"><EmailRoundedIcon /></a>
+            <a href="#" class="social-link"><WhatsAppIcon /></a>
+          </div>
+          <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><Link to="homeid"
+                smooth={true}
+                duration={600} ><a>Home</a></Link></li>
+              <li><Link to="aboutid"
+                smooth={true}
+                duration={600} ><a>About Us</a></Link></li>
+              <li><Link to="servicesid"
+                smooth={true}
+                duration={600} ><a>Services</a></Link></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <p>&copy; 2023 Matsya Manali. All rights reserved.</p>
+      </div>
     </footer>
   );
 };

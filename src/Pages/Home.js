@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import frontVideo from '../assets/video/frontVideo.mp4';
 import './Styles/home.css'
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
 
 import React from 'react'
 const Home = () => {
