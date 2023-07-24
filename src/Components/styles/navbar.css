@@ -1,4 +1,4 @@
-.homeLogo img{
+.homeLogo img {
   height: 8rem;
   width: 8rem;
   border-radius: 100px;
@@ -34,6 +34,28 @@
   /* border: 1px solid black; */
 }
 
+.navBarTitle {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.25;
+  letter-spacing: 0.02857em;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  height: 0.5rem;
+  background-color: white;
+  width: 100%;
+}
+
 .bookingTitle {
   font-size: 20px;
   font-weight: 500;
@@ -59,7 +81,6 @@
   .title {
     font-size: .75rem;
   }
-
 }
 
 .tooltip {

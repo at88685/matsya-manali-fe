@@ -50,5 +50,7 @@ export const images = {
     bonfireIcon: require('../assets/images/icons/bonfire.png'),
     breakfastIcon: require('../assets/images/icons/breakfast.png'),
     blackCircleIcon: require('../assets/images/icons/black-circle.png'),
+    agodaLogo: require('../assets/images/icons/agodaLogo.png'),
+    mmtIcon: require('../assets/images/icons/makeMyTripIcon.png'),
 };
 export const headerLogo = require('../assets/images/logo/2.png')

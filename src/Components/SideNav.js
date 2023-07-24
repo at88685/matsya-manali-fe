@@ -16,6 +16,8 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseIcon from '@mui/icons-material/Close'
 import { Link } from "react-scroll";
 import { headerLogo } from "../Constants/ImagesList";
+import { motion, useAnimation } from "framer-motion";
+import { images } from "../Constants/ImagesList";
 
 const SideNav = () => {
   const [open, setOpen] = useState(false);
@@ -30,7 +32,7 @@ const SideNav = () => {
   return (
     <>
       <Drawer
-      anchor="right"
+        anchor="right"
         open={openDrawer}
         onClose={() => {
           setOpenDrawer(false);
@@ -47,23 +49,23 @@ const SideNav = () => {
         }}
       >
         <Box sx={{
-            width: '100%',
-            display: 'flex',
-            justifyContent:'end',
-            paddingRight: '10px'
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'end',
+          paddingRight: '10px'
         }}>
-        <IconButton sx={{ alignItems: 'end'}}
-        onClick={() => {
-          setOpenDrawer(false);
-        }}
-      >
-       <CloseIcon />
-      </IconButton>
+          <IconButton sx={{ alignItems: 'end' }}
+            onClick={() => {
+              setOpenDrawer(false);
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
         </Box>
-        
+
         <div className='homeLogo'>
-                            <img src={headerLogo} alt="abc"></img>
-                            </div>
+          <img src={headerLogo} alt="abc"></img>
+        </div>
         <List>
           <Link
             to="homeid"
@@ -122,7 +124,7 @@ const SideNav = () => {
                 onClose={() => setOpen(false)}
                 title={
                   <div className="tooltip">
-                    <Button
+                    {/* <Button
                       variant="contained"
                       color="secondary"
                       onClick={handleClickAway}
@@ -137,7 +139,32 @@ const SideNav = () => {
                       onClick={handleClickAway}
                     >
                       MakeMyTrip
-                    </Button>
+                    </Button> */}
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                      style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer', marginTop: '0.2rem' }}
+                    >
+                      <img src={images.mmtIcon} height="30px" width="30px" alt="MakeMyTrip" />
+                      <div className="bookingTitle" style={{ marginLeft: '10px' }}>
+                        MMT
+                      </div>
+                    </motion.div>
+                    <div style={{ backgroundColor: 'white', height: '1px', marginTop: '0.4rem' }}></div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                      transition={{ duration: 0.3, delay: 0.2 }}
+                      style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}
+                    >
+                      <img src={images.agodaLogo} height="40px" width="40px" alt="Agoda" />
+                      <div className="bookingTitle" style={{ marginLeft: '10px' }}>
+                        Agoda
+                      </div>
+                    </motion.div>
                   </div>
                 }
               >
