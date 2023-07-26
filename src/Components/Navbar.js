@@ -70,9 +70,14 @@ const Navbar = () => {
                 {isMatch ? <>
                     <Grid container>
                         <Grid item xs={6}>
-                            <div className='headerLogo'>
-                                <img src={headerLogo} alt="abc"></img>
-                            </div>
+                            <Link to="homeid"
+                                smooth={true}
+                                duration={600}
+                            >
+                                <div className='headerLogo' >
+                                    <img src={headerLogo} alt="abc"></img>
+                                </div>
+                            </Link>
                         </Grid>
 
                     </Grid>
@@ -83,33 +88,44 @@ const Navbar = () => {
                 </> :
                     <Grid container alignItems="center" >
                         <Grid item xs={3} sx={{ display: 'flex' }}>
-                            <div className='headerLogo'>
-                                <img src={headerLogo} alt="abc"></img>
-                            </div>
+                            <Link to="homeid"
+                                smooth={true}
+                                duration={600}
+                            >
+                                <div className='headerLogo'>
+                                    <img src={headerLogo} alt="abc"></img>
+                                </div>
+                            </Link>
 
                         </Grid>
                         <Grid item xs={9} container justifyContent="end" spacing={2}>
 
                             <Link to="homeid"
                                 smooth={true}
-                                duration={600}>
+                                duration={600}
+                            >
                                 <Tab label="Home"></Tab> </Link>
                             <Link
                                 to="roomsid"
                                 smooth={true}
                                 duration={600}
+                                offset={-100}
                             >
                                 <Tab label="Rooms" ></Tab>
                             </Link>
 
                             <Link to="servicesid"
                                 smooth={true}
-                                duration={600}>
+                                duration={600}
+                                offset={-100}
+                            >
                                 <Tab label="Services" ></Tab></Link>
                             <Link to="footerid"
                                 smooth={true}
-                                duration={600} >
-                                <Tab label="Contact Us" ></Tab></Link>
+                                duration={600}
+                            >
+                                <Tab label="Contact Us" ></Tab>
+                            </Link>
                             <ClickAwayListener onClickAway={() => (handleClickAway)}>
                                 <Tooltip
                                     open={open}

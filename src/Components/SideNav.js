@@ -84,6 +84,7 @@ const SideNav = () => {
             to="roomsid"
             smooth={true}
             duration={600}
+            offset={-100}
             onClick={() => {
               setOpenDrawer(false);
             }}
@@ -97,6 +98,7 @@ const SideNav = () => {
             to="servicesid"
             smooth={true}
             duration={600}
+            offset={-100}
             onClick={() => {
               setOpenDrawer(false);
             }}
