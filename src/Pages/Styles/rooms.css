@@ -1,5 +1,6 @@
 .rooms-container {
   min-height: fit-content;
+  width: fit-content;
   /* background-color: whitesmoke; */
 
 }

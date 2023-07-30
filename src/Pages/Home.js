@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import frontVideo from '../assets/video/frontVideo.mp4';
+import matsyaManaliOutsideVedio from "../assets/video/matsyaManaliOutsideVedio.mp4"
 import './Styles/home.css'
 import { motion } from "framer-motion";
 
@@ -23,11 +24,11 @@ const Home = () => {
 
   return (
     <div className="homeMainDiv" id='homeid'>
-      <video autoPlay src={frontVideo} muted loop style={{ objectFit: 'cover', height: '100vh', width: '100%', opacity: '1' }}>
+      <video autoPlay muted loop style={{ objectFit: 'cover', height: '100vh', width: '100%', opacity: '1' }}>
         {/* <source src={frontVideo} type="video/mp4" /> */}
         {/* Add additional <source> elements for different video formats (e.g., WebM, Ogg) */}
         {/* Fallback content for browsers that don't support HTML5 video */}
-        Your browser does not support the video tag.
+        <source src={frontVideo} type='video/mp4' />
       </video>
       {/* <div className='home-body'> */}
       <motion.div className='welcomeToMatsyaManaliDiv'

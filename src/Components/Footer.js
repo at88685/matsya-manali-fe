@@ -32,6 +32,10 @@ const Footer = () => {
     color: '#555555',
   };
 
+  // const openVirtualSite = () => {
+  //   window.open("https://dotcomsolutions.in/matsya-manali/", "_black", "noreferrer");
+  // }
+
   return (
     <footer class="footer" id="footerid">
       <div class="footer-content">
@@ -46,10 +50,10 @@ const Footer = () => {
             <p>Landline: 1902-292342 | Phone: 6230766695 </p>
           </div>
           <div class="social-links">
-            <a href="#" class="social-link"><InstagramIcon /></a>
-            <a href="#" class="social-link"><FacebookRoundedIcon /></a>
-            <a href="#" class="social-link"><EmailRoundedIcon /></a>
-            <a href="#" class="social-link"><WhatsAppIcon /></a>
+            <a href="https://www.instagram.com/matsya_manali/?igshid=MzRlODBiNWFlZA%3D%3D" class="social-link" target='_blank'><InstagramIcon /></a>
+            <a href="https://www.facebook.com/people/Matsya-Manali/100094771658829/" class="social-link" target='_blank'><FacebookRoundedIcon /></a>
+            <a href="mailto:matsyamanali@gmail.com" class="social-link" target='_blank'><EmailRoundedIcon /></a>
+            <a href="https://api.whatsapp.com/send?phone=+91 62307 66695&text=" class="social-link" target='_black'><WhatsAppIcon /></a>
           </div>
           <div class="quick-links">
             <h3>Quick Links</h3>

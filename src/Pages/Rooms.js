@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Styles/rooms.css";
 import { RoomsSeperated } from "../Constants/RoomsList";
 import { SpecialRoom } from "../Constants/RoomsList";
@@ -38,9 +38,25 @@ const Rooms = () => {
     hidden: { opacity: 0, y: -50 },
     visible: { opacity: 1, y: 0 }
   };
+
+  const variantsChangingRightToDownFuntion = () => {
+    if (window.innerWidth < 535) {
+      return fadeDownVariants;
+    } else {
+      return fadeRightVariants;
+    }
+  }
+
+  const variantsChangingLeftToUpFuntion = () => {
+    if (window.innerWidth < 535) {
+      return fadeUpVariants;
+    } else {
+      return fadeLeftVariants;
+    }
+  }
+
   return (
     <>
-      
       <div className="rooms-container" id="roomsid">
         <div
           style={{
@@ -67,7 +83,7 @@ const Rooms = () => {
           <motion.img src={RoomsSeperated.valleyView.image} alt="Slider Image 2" ref={valleyRef}
             initial="hidden"
             animate={useValleyRef ? "visible" : "hidden"}
-            variants={fadeRightVariants}
+            variants={variantsChangingRightToDownFuntion()}
             transition={{ duration: 1.5 }}
             className="valley-room-image"
           />
@@ -84,7 +100,7 @@ const Rooms = () => {
           <motion.div className="solangTextsDiv" ref={solangRef}
             initial="hidden"
             animate={useSolangRef ? "visible" : "hidden"}
-            variants={fadeLeftVariants}
+            variants={variantsChangingLeftToUpFuntion()}
             transition={{ duration: 1.5 }}>
             <div className="valleyViewTitle">{RoomsSeperated.solangView.title}</div>
             <div className="description">{RoomsSeperated.solangView.description}
@@ -105,7 +121,7 @@ const Rooms = () => {
           <motion.img src={RoomsSeperated.rohtangView.image} alt="Slider Image 2" ref={rohtangRef}
             initial="hidden"
             animate={useRohtangRef ? "visible" : "hidden"}
-            variants={fadeRightVariants}
+            variants={variantsChangingRightToDownFuntion()}
             transition={{ duration: 1.5 }}
             className="rohtang-room-image"
           />
@@ -126,7 +142,7 @@ const Rooms = () => {
           <motion.div className="duplexMainDiv" ref={ourSpecialRef}
             initial="hidden"
             animate={useOurSpecialRef ? "visible" : "hidden"}
-            variants={fadeLeftVariants}
+            variants={variantsChangingLeftToUpFuntion()}
             transition={{ duration: 1.5 }}>
             <div className="valleyViewTitle">{SpecialRoom.title}</div>
             <div className="description">{SpecialRoom.description}

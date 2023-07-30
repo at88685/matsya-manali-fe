@@ -49,13 +49,13 @@ const Gallery = () => {
               </Carousel>
             </Box>
           </div> */}
-          <CarouselComponent imagesList={InsideImagesList} caption="Inside View" />
+          <CarouselComponent imagesList={InsideImagesList} caption="Enchanting Innards" />
         </Grid>
         <Grid item xs={12} md={4}>
-          <CarouselComponent imagesList={OutsideImagesList} caption="Outside View" />
+          <CarouselComponent imagesList={OutsideImagesList} caption="Scenic Surrounds" />
         </Grid>
         <Grid item xs={12} md={4}>
-          <CarouselComponent imagesList={BalconyViewImagesList} caption="Balcony View" />
+          <CarouselComponent imagesList={BalconyViewImagesList} caption="Veranda Vista" />
         </Grid>
       </Grid>
       <div></div>
