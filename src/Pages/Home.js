@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import frontVideo from '../assets/video/frontVideo.mp4';
-import matsyaManaliOutsideVedio from "../assets/video/matsyaManaliOutsideVedio.mp4"
 import './Styles/home.css'
 import { motion } from "framer-motion";
 
