@@ -53,7 +53,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/matsya_manali/?igshid=MzRlODBiNWFlZA%3D%3D" class="social-link" target='_blank'><InstagramIcon /></a>
             <a href="https://www.facebook.com/people/Matsya-Manali/100094771658829/" class="social-link" target='_blank'><FacebookRoundedIcon /></a>
             <a href="mailto:matsyamanali@gmail.com" class="social-link" target='_blank'><EmailRoundedIcon /></a>
-            <a href="https://api.whatsapp.com/send?phone=+91 62307 66695&text=" class="social-link" target='_black'><WhatsAppIcon /></a>
+            <a href="https://api.whatsapp.com/send?phone=6230766695" class="social-link" target='_black'><WhatsAppIcon /></a>
           </div>
           <div class="quick-links">
             <h3>Quick Links</h3>

@@ -7,7 +7,7 @@ const Aminities = () => {
     return (
         <div className='aminities-container'>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <div className='aminities-title'>Amenities</div>
+                <div className='aminities-title'>Comfort Amenities</div>
                 <div className="divider" ></div>
             </div>
 

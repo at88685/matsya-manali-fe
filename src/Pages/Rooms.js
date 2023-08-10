@@ -66,7 +66,7 @@ const Rooms = () => {
             alignItems: "center",
           }}
         >
-          <div className="galleryText">Rooms</div>
+          <div className="galleryText">Standard Rooms</div>
           <div className="divider"></div>
         </div>
         {/* Valley View*/}
@@ -128,7 +128,7 @@ const Rooms = () => {
         </div>
         {/*Our Specials*/}
         <div className="ourSpecialsMainDiv">
-          <div className="galleryText">Our Specials</div>
+          <div className="galleryText">Executive Rooms</div>
           <div className="divider"></div>
         </div>
         <div className="ourSpecialsContentsDiv">

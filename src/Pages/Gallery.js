@@ -16,39 +16,11 @@ const Gallery = () => {
           marginTop: '40px'
         }}
       >
-        <div className="galleryText">Gallery</div>
+        <div className="galleryText">Discover Our Gallery</div>
         <div className="divider"></div>
       </div>
       <Grid container xs={12}>
         <Grid item xs={12} md={4}>
-          {/* <div className="gallery-item">
-            <div className="subTitle">Inside View</div>
-            <Box className="carasoul-box">
-              <Carousel
-                navButtonsAlwaysVisible={false}
-                autoPlay={true}
-                indicatorIconButtonProps={{
-                  style: indicatorStyle,
-                }}
-              >
-                {images.map((item, index) => {
-                  return (
-                    <img
-                      key={index}
-                      src={item}
-                      alt="insideview"
-                      style={{
-                        objectFit: "cover",
-                        borderRadius: "10px",
-                        height: "30rem",
-                      }}
-                      width="100%"
-                    />
-                  );
-                })}
-              </Carousel>
-            </Box>
-          </div> */}
           <CarouselComponent imagesList={InsideImagesList} caption="Enchanting Innards" />
         </Grid>
         <Grid item xs={12} md={4}>
