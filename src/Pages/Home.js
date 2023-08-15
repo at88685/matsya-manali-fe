@@ -40,12 +40,20 @@ const Home = () => {
     hidden: { opacity: 0, y: 0 },
     visible: { opacity: 1, y: -200 }
   };
+  const indicatorStyle = {
+    display: "none",
+  };
   return (
     <Box position="relative" height="100vh" overflow="hidden" id='homeid'>
       <Carousel
-        animation="fade"
+        animation="none"
         navButtonsAlwaysVisible={false}
         autoPlay={true}
+        interval={2500}
+        stopAutoPlayOnHover= {false}
+        indicatorIconButtonProps={{
+          style: indicatorStyle,
+        }}
         
       >
         {imagesList.map((item, index) => (
@@ -83,9 +91,11 @@ const Home = () => {
         }} onClick={openVirtualSite}>Explore Virtually</Button>
       </motion.div>
             </TransparentOverlay>
+           
           </div>
         ))}
       </Carousel>
+      
     </Box>
   );
 };
