@@ -1,6 +1,5 @@
 .gallery-container {
     height: fit-content;
-    /* background-color: whitesmoke; */
 }
 
 .carasoul-box {
@@ -8,19 +7,10 @@
     margin-top: 2rem;
     width: 85%;
     border-radius: .5rem;
-    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+
 }
 
-.carasoulInherited {
-    /* margin-top: 2rem;
-    width: 85%;
-    background-color: aqua;
-    border-radius: .5rem;
-    display: flex;
-    flex-direction: column; */
-    /* justify-content: center;
-    align-items: center; */
-}
+.carasoulInherited {}
 
 
 .gallery-item {

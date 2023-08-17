@@ -12,7 +12,6 @@
 
 .divider {
     height: 3px;
-    /* background-color: black; */
     background-color: rgba(24, 157, 99, 0.538);
     width: 150px;
     margin-top: 10px;
@@ -133,7 +132,6 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    /* margin-top: 1rem; */
 }
 
 .ovenComponentsDiv {
@@ -141,7 +139,6 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    /* margin-top: 1rem; */
 }
 
 .sheetsAndTowelsDiv {
@@ -150,8 +147,6 @@
     justify-content: start;
     align-items: center;
 }
-
-
 
 @media (max-width:1050px) {
     .aminitiesName {
@@ -165,13 +160,11 @@
     }
 
     .wifiAssistanceDiv {
-        /* width: 100%; */
         margin-top: 1rem;
         width: 80%;
     }
 
     .ovenSheetsDiv {
-        /* width: 100%; */
         width: 80%;
     }
 
@@ -191,38 +184,6 @@
         justify-content: start;
     }
 }
-
-/* @media (max-width:950px) {
-
-    .aminitiesDescriptionMainContainer {
-        flex-direction: column;
-    }
-
-    .wifiAssistanceDiv {
-        margin-top: 1rem;
-        width: 80%;
-    }
-
-    .ovenSheetsDiv {
-        width: 80%;
-    }
-
-    .assistanceDiv {
-        justify-content: start;
-    }
-
-    .ovenDiv {
-        justify-content: start;
-    }
-
-    .sheetsDiv {
-        justify-content: start;
-    }
-
-    .freeWifiDiv {
-        justify-content: start;
-    }
-} */
 
 @media (max-width:700px) {
     .aminitiesName {
@@ -245,55 +206,13 @@
 }
 
 @media(max-width:380px) {
-    /* .wifiAssistanceDiv {
-        flex-direction: column;
-    }
-
-    .ovenSheetsDiv {
-        flex-direction: column;
-    } */
-
-    /* .ovenDiv {
-        margin-top: 0.8rem;
-        padding-right: 6.2rem;
-    }
-
-    .freeWifiDiv {
-        padding-right: 4rem;
-    }
-
-    .assistanceDiv {
-        margin-top: 0.8rem;
-        padding-right: 0.6rem;
-    } */
 
     .wifiAssistanceDiv {
         justify-content: start;
     }
-
 }
 
 @media (max-width:380px) {
-    /* .ovenDiv {
-        width: fit-content;
-    }
-
-    .freeWifiDiv {
-        width: fit-content;
-    }
-
-    .assistanceDiv {
-        width: fit-content;
-        margin-left: 1rem;
-    }
-
-    .sheetsDiv {
-        width: fit-content;
-        margin-left: 1rem;
-    } */
-}
-
-@media (max-width:350px) {
     .ovenSheetsDiv {
         flex-direction: column;
     }
@@ -310,3 +229,5 @@
         margin-top: 1rem;
     }
 }
+
+@media (max-width:340px) {}

@@ -8,6 +8,8 @@ import { headerLogo } from '../Constants/ImagesList';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { images } from '../Constants/ImagesList';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 
 const TransparentAppBar = styled(AppBar)(({ theme, isScrolled }) => ({
     backgroundColor: isScrolled ? 'whitesmoke' : '#0000004D',
@@ -61,9 +63,19 @@ const Navbar = () => {
         };
     }, []);
 
-    const toggleDropdown = () => {
-        setShowDropdown((prevState) => !prevState);
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleOpenMenu = (event) => {
+        setAnchorEl(event.currentTarget);
     };
+
+    const handleCloseMenu = () => {
+        setAnchorEl(null);
+    };
+
+    const openMmtLink = () => {
+        window.open("https://www.makemytrip.com/hotels/hotel-details/?_branch_match_id=1182903915794133802&_branch_referrer=H4sIAAAAAAAAAyXN24rCMBSF4bfJpU0TqkXYiOjAiENF2j5AiFsbmtOkCRKfXmsv13%2BxviFGP22LQnivlR2nlREjmhyD8ivpTPFfH1%2FpbNmj3w0uoj7dgFHG6YaXZcV5takpXxOpYoZDd%2B57Il2yMWQ4NSQ4Z9oo8jUJre4KAzCkSOSAclQWaF1W89cSXIpzWS%2FFePhye%2B%2FbQQRs8Em0k2n6%2BIvzXV32CDNOAj6Us7N6T9aiboRB%2BL10P38tCZOEEhm%2BAU0qp3jsAAAA&checkin=08162023&checkout=08172023&city=CTKUU&cmp=hotelAppShareNew&country=IN&funnelName=HOTELS&hotelId=202307311533578036&locusId=CTKUU&locusType=city&region=IN&roomStayQualifier=2e0e&rsc=1e2e", "_black", "noreferrer");
+    }
     return (
         <TransparentAppBar position="fixed" isScrolled={isScrolled}>
             <Toolbar>
@@ -126,49 +138,60 @@ const Navbar = () => {
                             >
                                 <Tab label="Contact Us" ></Tab>
                             </Link>
-                            <ClickAwayListener onClickAway={() => (handleClickAway)}>
+                            {/* <ClickAwayListener onClickAway={() => (handleClickAway)}>
                                 <Tooltip
                                     open={open}
                                     onClose={() => setOpen(false)}
                                     title={
-                                        <div className='tooltip'>
-                                            {/* <Button variant="contained" color='secondary' onClick={handleClickAway} sx={{ marginTop: '1rem' }}>
-                                                Agoda
-                                            </Button>
-                                            <Button sx={{ margin: '1rem 0' }} variant="contained" color='secondary' onClick={handleClickAway}>
-                                                MakeMyTrip
-                                            </Button> */}
+                                        <div className='tooltip' onClick={openMMTLink}>
                                             <motion.div
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 exit={{ opacity: 0, x: -20 }}
                                                 transition={{ duration: 0.3, delay: 0.1 }}
                                                 style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer', marginTop: '0.2rem' }}
+
                                             >
                                                 <img src={images.mmtIcon} height="30px" width="30px" alt="MakeMyTrip" />
                                                 <div className="bookingTitle" style={{ marginLeft: '10px' }}>
                                                     MMT
                                                 </div>
                                             </motion.div>
-                                            <div style={{ backgroundColor: 'white', height: '1px', marginTop: '0.4rem' }}></div>
-                                            <motion.div
-                                                initial={{ opacity: 0, x: -20 }}
-                                                animate={{ opacity: 1, x: 0 }}
-                                                exit={{ opacity: 0, x: -20 }}
-                                                transition={{ duration: 0.3, delay: 0.2 }}
-                                                style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', cursor: 'pointer' }}
-                                            >
-                                                <img src={images.agodaLogo} height="40px" width="40px" alt="Agoda" />
-                                                <div className="bookingTitle" style={{ marginLeft: '10px' }}>
-                                                    Agoda
-                                                </div>
-                                            </motion.div>
+                                            <div style={{ height: '1px', marginTop: '0.4rem' }}></div>
+
                                         </div>
                                     }
                                 >
                                     <Tab label="Book Now" onClick={handleClick}></Tab>
                                 </Tooltip>
-                            </ClickAwayListener>
+                            </ClickAwayListener> */}
+                            <Link onClick={handleOpenMenu}
+                                smooth={true}
+                                duration={600}
+                                offset={-100}
+                            >
+                                <Tab label="Book Now" ></Tab>
+                            </Link>
+                            <div>
+                                <Menu
+                                    anchorEl={anchorEl}
+                                    open={Boolean(anchorEl)}
+                                    onClick={handleCloseMenu}
+                                    getContentAnchorEl={null}
+                                    anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+                                    transformOrigin={{ vertical: 'top', horizontal: 'center' }}
+                                >
+                                    <MenuItem style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} onClick={openMmtLink}>
+                                        <img
+                                            src={images.mmtIcon} height="30px" width="30px" alt="MakeMyTrip"
+                                        />
+                                        <div style={{ marginLeft: '10px' }}>MMT</div>
+                                    </MenuItem>
+                                </Menu>
+                            </div>
+
+
+
                         </Grid>
 
                     </Grid>}

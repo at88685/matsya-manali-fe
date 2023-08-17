@@ -18,7 +18,7 @@ const TransparentOverlay = styled("div")({
 });
 
 const Text = styled("div")({
-  color: "#fff", 
+  color: "#fff",
   textAlign: "center",
   padding: "16px",
 });
@@ -38,7 +38,7 @@ const Home = () => {
   const [showMainContent, setShowMainContent] = useState(false);
   const deluxFadeDownVariants = {
     hidden: { opacity: 0, y: 0 },
-    visible: { opacity: 1, y: -200 }
+    visible: { opacity: 1, y: -100 }
   };
   const indicatorStyle = {
     display: "none",
@@ -47,14 +47,13 @@ const Home = () => {
     <Box position="relative" height="100vh" overflow="hidden" id='homeid'>
       <Carousel
         animation="none"
-        navButtonsAlwaysVisible={false}
+        navButtonsAlwaysInvisible={true}
         autoPlay={true}
         interval={2500}
-        stopAutoPlayOnHover= {false}
+        stopAutoPlayOnHover={false}
         indicatorIconButtonProps={{
           style: indicatorStyle,
         }}
-        
       >
         {imagesList.map((item, index) => (
           <div key={index} style={{ position: "relative" }}>
@@ -70,32 +69,31 @@ const Home = () => {
 
             {/* Transparent overlay with centered text */}
             <TransparentOverlay>
-            <motion.div className='welcomeToMatsyaManaliDiv'
-        initial="hidden"
-        animate={showMainContent ? "visible" : "hidden"}
-        variants={deluxFadeDownVariants}
-        transition={{ duration: 2 }}
+              <motion.div className='welcomeToMatsyaManaliDiv'
+                initial="hidden"
+                animate={showMainContent ? "visible" : "hidden"}
+                variants={deluxFadeDownVariants}
+                transition={{ duration: 2 }}
 
-      >
-        <Text>
-        <div className='welcomeToMatsyaManaliText'>Welcome to Matsya Manali</div>
-        <div className='discoverGreatnessText'>Discover the greatness of mountains with an eccentric feel of nature.</div>
-        </Text>
-        <Button variant='outlined' sx={{
-          color: 'white',
-          ":hover": {
-            color: '#9D42DA',
-            backgroundColor: 'white'
-          },
-          marginTop: '15px'
-        }} onClick={openVirtualSite}>Explore Virtually</Button>
-      </motion.div>
+              >
+                <Text>
+                  <div className='welcomeToMatsyaManaliText'>Welcome to Matsya Manali</div>
+                  <div className='discoverGreatnessText'>Discover the greatness of mountains with an eccentric feel of nature.</div>
+                </Text>
+                <Button variant='outlined' sx={{
+                  color: 'white',
+                  ":hover": {
+                    color: '#9D42DA',
+                    backgroundColor: 'white'
+                  },
+                  marginTop: '15px'
+                }} onClick={openVirtualSite}>Explore Virtually</Button>
+              </motion.div>
             </TransparentOverlay>
-           
           </div>
         ))}
       </Carousel>
-      
+
     </Box>
   );
 };

@@ -53,4 +53,7 @@ export const images = {
     agodaLogo: require('../assets/images/icons/agodaLogo.png'),
     mmtIcon: require('../assets/images/icons/makeMyTripIcon.png'),
 };
-export const headerLogo = require('../assets/images/logo/2.png')
+export const headerLogo = require('../assets/images/logo/2.png');
+export const homeCarausel = {
+
+};
