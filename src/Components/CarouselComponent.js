@@ -13,7 +13,7 @@ const CarouselComponent = (props) => {
         <div className="subTitle">{caption}</div>
         <Box className="carasoul-box">
           <Carousel
-            animation='none'
+            // animation='none'
             navButtonsAlwaysVisible={false}
             autoPlay={true}
             indicatorIconButtonProps={{

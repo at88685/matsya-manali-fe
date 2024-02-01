@@ -4,6 +4,7 @@ import { RoomsSeperated } from "../Constants/RoomsList";
 import { SpecialRoom } from "../Constants/RoomsList";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { strings } from "../Constants/Strings";
 
 const Rooms = () => {
   const [ourSpecialRef, useOurSpecialRef] = useInView({
@@ -66,7 +67,7 @@ const Rooms = () => {
             alignItems: "center",
           }}
         >
-          <div className="galleryText">Standard Rooms</div>
+          <div className="galleryText">{strings.standardRooms}</div>
           <div className="divider"></div>
         </div>
         {/* Valley View*/}
@@ -128,7 +129,7 @@ const Rooms = () => {
         </div>
         {/*Our Specials*/}
         <div className="ourSpecialsMainDiv">
-          <div className="galleryText">Executive Rooms</div>
+          <div className="galleryText">{strings.executiveRooms}</div>
           <div className="divider"></div>
         </div>
         <div className="ourSpecialsContentsDiv">

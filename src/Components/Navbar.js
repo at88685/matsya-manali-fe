@@ -165,14 +165,14 @@ const Navbar = () => {
                                     <Tab label="Book Now" onClick={handleClick}></Tab>
                                 </Tooltip>
                             </ClickAwayListener> */}
-                            <Link onClick={handleOpenMenu}
+                            {/* <Link onClick={handleOpenMenu}
                                 smooth={true}
                                 duration={600}
                                 offset={-100}
                             >
                                 <Tab label="Book Now" ></Tab>
-                            </Link>
-                            <div>
+                            </Link> */}
+                            {/* <div>
                                 <Menu
                                     anchorEl={anchorEl}
                                     open={Boolean(anchorEl)}
@@ -188,12 +188,8 @@ const Navbar = () => {
                                         <div style={{ marginLeft: '10px' }}>MMT</div>
                                     </MenuItem>
                                 </Menu>
-                            </div>
-
-
-
+                            </div> */}
                         </Grid>
-
                     </Grid>}
             </Toolbar>
         </TransparentAppBar>

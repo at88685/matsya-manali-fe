@@ -4,6 +4,7 @@ import { Box, Button, styled } from "@mui/material";
 import { InsideImagesList } from "../Constants/ImagesList";
 import './Styles/home.css'
 import { motion } from "framer-motion";
+import { strings } from "../Constants/Strings";
 
 const TransparentOverlay = styled("div")({
   position: "absolute",
@@ -30,6 +31,10 @@ const Home = () => {
   const openVirtualSite = () => {
     window.open("https://dotcomsolutions.in/matsya-manali/", "_black", "noreferrer");
   }
+
+  const openMmtLink = () => {
+    window.open("https://www.makemytrip.com/hotels/hotel-details/?_branch_match_id=1182903915794133802&_branch_referrer=H4sIAAAAAAAAAyXN24rCMBSF4bfJpU0TqkXYiOjAiENF2j5AiFsbmtOkCRKfXmsv13%2BxviFGP22LQnivlR2nlREjmhyD8ivpTPFfH1%2FpbNmj3w0uoj7dgFHG6YaXZcV5takpXxOpYoZDd%2B57Il2yMWQ4NSQ4Z9oo8jUJre4KAzCkSOSAclQWaF1W89cSXIpzWS%2FFePhye%2B%2FbQQRs8Em0k2n6%2BIvzXV32CDNOAj6Us7N6T9aiboRB%2BL10P38tCZOEEhm%2BAU0qp3jsAAAA&checkin=08162023&checkout=08172023&city=CTKUU&cmp=hotelAppShareNew&country=IN&funnelName=HOTELS&hotelId=202307311533578036&locusId=CTKUU&locusType=city&region=IN&roomStayQualifier=2e0e&rsc=1e2e", "_black", "noreferrer");
+}
 
   useEffect(() => {
     setShowMainContent(true);
@@ -66,7 +71,6 @@ const Home = () => {
                 height: "100vh",
               }}
             />
-
             {/* Transparent overlay with centered text */}
             <TransparentOverlay>
               <motion.div className='welcomeToMatsyaManaliDiv'
@@ -74,11 +78,10 @@ const Home = () => {
                 animate={showMainContent ? "visible" : "hidden"}
                 variants={deluxFadeDownVariants}
                 transition={{ duration: 2 }}
-
               >
                 <Text>
-                  <div className='welcomeToMatsyaManaliText'>Welcome to Matsya Manali</div>
-                  <div className='discoverGreatnessText'>Discover the greatness of mountains with an eccentric feel of nature.</div>
+                  <div className='welcomeToMatsyaManaliText'>{strings.welcomeToMatsyaManali}</div>
+                  <div className='discoverGreatnessText'>{strings.matsyaManaliDesc}</div>
                 </Text>
                 <Button variant='outlined' sx={{
                   color: 'white',
@@ -87,13 +90,15 @@ const Home = () => {
                     backgroundColor: 'white'
                   },
                   marginTop: '15px'
-                }} onClick={openVirtualSite}>Explore Virtually</Button>
+                }} onClick={openVirtualSite}>{strings.exploreVirtually}</Button>
+                <Text>
+                  <div className="bookNowText" onClick={openMmtLink}>{strings.bookNow.toUpperCase()}</div>
+                </Text>
               </motion.div>
             </TransparentOverlay>
           </div>
         ))}
       </Carousel>
-
     </Box>
   );
 };

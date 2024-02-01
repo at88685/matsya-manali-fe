@@ -1,0 +1,28 @@
+export const strings = {
+    executiveRooms:"Executive Rooms",
+    standardRooms:"Standard Rooms",
+    accomodationOfferings:"Accomodation Offerings",
+    freeParking:"Free Parking",
+    fineDineRestraunt:"Fine Dine Restraunt",
+    wifi:"Wi-Fi",
+    panaromicView:"Panaromic View",
+    bonFire:"BonFire",
+    compilemtaryBreakfast:"Complimentary Breakfast",
+    exploreVirtually:"Explore Virtually",
+    welcomeToMatsyaManali:"Welcome to Matsya Manali",
+    contactUs:"Contact Us",
+    home:"Home",
+    aboutUs:"About Us",
+    services:"Services",
+    contact:"Contact",
+    getToKnowUs:"Get To Know Us",
+    bookNow:"Book Now",
+    matsyaManaliDesc:"Discover the greatness of mountains with an eccentric feel of nature.",
+    freeParkingDesc:"Offering free parking, we ease the frustration of finding a spot in bustling city centers.Alleviating urban parking woes with our complimentary spaces.Providing relief by granting hassle-free parking solutions.",
+    fineDineDesc:"Indulge in a culinary journey like no other at our hotel's exquisite fine-dining restaurant.  Each plate is a work of art, meticulously crafted to please both the eye and the taste buds.",
+    wifiDesc:"Thrilled to offer complimentary high-speed Wi-Fi for all guests, ensuring a reliable, secure, and uninterrupted connection. Stay connected, stream, download, and surf hassle-free with our fast network.",
+    panaromicDesc:"Experience visual splendor at our hotel with captivating panoramic views. Our enviable location offers unobstructed perspectives of nature's finest masterpieces. Embrace enchanting vistas of bustling cityscapes or serene valleys.",
+    bonFireDesc:"Join us for an enchanting bonfire experience—a timeless tradition uniting people in camaraderie and mesmerizing flames. Enjoy our designated outdoor space, nestled in picturesque surroundings.",
+    complimentaryDesc:"Enjoy a prideful stay with our complimentary breakfast. Wake up to delicious morning meals, catered to diverse tastes and preferences. From pastries, cereals, to fruits and eggs, our satisfying breakfast spread awaits you."
+
+}

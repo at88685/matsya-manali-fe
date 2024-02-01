@@ -72,12 +72,14 @@
   width: 43%;
   height: 30rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* transition: 2s; */
 }
 
 .valley-room-image {
   width: 43%;
   height: 30rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* transition: 2s; */
 }
 
 .solang-room-image {
@@ -85,6 +87,7 @@
   height: 30rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-right: 5%;
+  /* transition: 2s; */
 }
 
 .roomsText {
@@ -223,8 +226,6 @@
       rgba(136, 160, 255, 0.46)217.91%);
   box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
 }
-
-
 
 @media (max-width:1050px) {
   .ourSpecialsContentsDiv {

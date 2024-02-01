@@ -3,6 +3,7 @@ import './Styles/about.css'
 import { Box, Grid } from '@mui/material'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { strings } from '../Constants/Strings';
 
 const About = () => {
   const [aboutUsRef, useAboutUsRef] = useInView({
@@ -16,7 +17,7 @@ const About = () => {
   return (
     <div className='about-container'>
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <div className='aboutUsTitle'>Get To Know Us</div>
+        <div className='aboutUsTitle'>{strings.getToKnowUs}</div>
         <div className="divider" ></div>
       </div>
       <Grid item xs={12}>

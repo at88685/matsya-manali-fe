@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import {
   Drawer,
   IconButton,
-  ListItemButton,
-  ListItemIcon,
   ListItemText,
   List,
   Button,
-  Tooltip,
-  ClickAwayListener,
   Divider,
   Box,
 } from "@mui/material";
@@ -31,10 +27,6 @@ const SideNav = () => {
   const handleClickAway = () => {
     setOpen(false);
   };
-
-  // const openMMTLink = () => {
-  //   window.open("https://www.makemytrip.com/hotels/hotel-details/?_branch_match_id=1182903915794133802&_branch_referrer=H4sIAAAAAAAAAyXN24rCMBSF4bfJpU0TqkXYiOjAiENF2j5AiFsbmtOkCRKfXmsv13%2BxviFGP22LQnivlR2nlREjmhyD8ivpTPFfH1%2FpbNmj3w0uoj7dgFHG6YaXZcV5takpXxOpYoZDd%2B57Il2yMWQ4NSQ4Z9oo8jUJre4KAzCkSOSAclQWaF1W89cSXIpzWS%2FFePhye%2B%2FbQQRs8Em0k2n6%2BIvzXV32CDNOAj6Us7N6T9aiboRB%2BL10P38tCZOEEhm%2BAU0qp3jsAAAA&checkin=08162023&checkout=08172023&city=CTKUU&cmp=hotelAppShareNew&country=IN&funnelName=HOTELS&hotelId=202307311533578036&locusId=CTKUU&locusType=city&region=IN&roomStayQualifier=2e0e&rsc=1e2e", "_black", "noreferrer");
-  // }
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -180,9 +172,9 @@ const SideNav = () => {
               </Tooltip>
             </div>
           </ClickAwayListener> */}
-          <Divider />
+          {/* <Divider /> */}
 
-          <div>
+          {/* <div>
             <Button onClick={handleOpenMenu} style={{ color: 'black' }}>
               Book Now
             </Button>
@@ -201,7 +193,7 @@ const SideNav = () => {
                 <div style={{ marginLeft: '10px' }}>MMT</div>
               </MenuItem>
             </Menu>
-          </div>
+          </div> */}
 
         </List>
       </Drawer>
