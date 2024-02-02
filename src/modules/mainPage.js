@@ -12,18 +12,26 @@ import RoomServ from '../Pages/RoomServ';
 import About from '../Pages/About';
 import Aminities from '../Pages/Amenities';
 import Footer from '../Components/Footer';
+import Testimonials from '../Pages/Testimonials';
 
 const MainPage = () => {
     return (
         <>
+            <div style={{
+                overflowX: "hidden"
+            }} >
+                 
+            </div>
             <Navbar />
             <Home />
             <Rooms />
             <RoomServ />
             <Aminities />
             <Gallery />
+            <Testimonials />
             <About />
             <Footer />
+            
         </>
     )
 }

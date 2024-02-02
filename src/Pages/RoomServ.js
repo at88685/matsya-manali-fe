@@ -17,7 +17,7 @@ const RoomServ = () => {
             <Box className='free-parking-box'>
               <div className="subTitle">{strings.freeParking}</div>
               <img src={images.parkingIcon} alt='parking-icon' className='servicesImages' />
-              <div className="description" >{strings.freeParkingDesc}</div>
+              <div className="description" >{strings.freeParkingDesc}</div> 
             </Box>
           </Grid>
           <Grid item xs={12} md={4} >

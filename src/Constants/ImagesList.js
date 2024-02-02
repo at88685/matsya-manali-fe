@@ -54,6 +54,8 @@ export const images = {
     mmtIcon: require('../assets/images/icons/makeMyTripIcon.png'),
 };
 export const headerLogo = require('../assets/images/logo/2.png');
-export const homeCarausel = {
-
+export const influencersImages = {
+    kritiMehra:require("../assets/images/influencers/kriti_mehra.jpeg"),
+    ajju:require("../assets/images/influencers/ajju.jpeg"),
+    anunay:require("../assets/images/influencers/anunay.jpeg")
 };

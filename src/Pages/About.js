@@ -30,7 +30,7 @@ const About = () => {
             variants={aboutUsFadeUpVariant}
             transition={{ ease: "linear", duration: 1.5, x: { duration: 1 } }}
 
-          >Matsya Manali, a tranquil retreat nestled in the heart of the picturesque town of Manali.
+          >Matsya Manali, a tranquil retreat nestled in the heart of the picturesque town of Manali , Himanchal Pradesh .
             Our hotel is ideally located to offer you breathtaking views of the majestic Himalayas,
             lush green valleys, and the glistening Beas River, providing a truly enchanting experience
             for nature lovers and adventure enthusiasts alike.<br /><br />
