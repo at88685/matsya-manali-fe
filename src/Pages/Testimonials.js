@@ -5,6 +5,7 @@ import "./Styles/testimonials.css"
 import { Avatar } from "@mui/material";
 import { influencersImages } from "../Constants/ImagesList";
 import { strings } from "../Constants/Strings";
+import Rating from '@mui/material/Rating';
 
 const Card = (props) => {
     return (
@@ -13,6 +14,7 @@ const Card = (props) => {
                 <img src={props.images} className="influencersImage"/>
                 <div className="nameStyling">{props.name}</div>
                 <div className="designationStyling">{props.designation}</div>
+                <Rating name="read-only" value={5} readOnly size="medium"/>
                 <div className="wordsStyling">{props.words}</div>
             </div>
         </div>
@@ -22,21 +24,21 @@ const Card = (props) => {
 const infulencersArray = [
     {
         name: "Kriti Mehra",
-        words: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        words: "Breathtaking views from our room along with superb hospitality made our stay at Matsya Manali truly memorable. The bonfire night event was a highlight for us, we haven’t experienced it at any hotel I stayed at. Excellent service and atmosphere - we'll certainly return!",
         designation: "Social Media Inflencer",
         image: influencersImages?.kritiMehra,
     },
     {
         name: "Ajju Bhai",
-        words: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        words: "I thoroughly enjoyed my stay at Matsya Manali. The scenic views from my room overlooking the mountains were simply breathtaking. Best of all, the hotel was located a short distance away from the city traffic. Nearby popular tourist destinations like Rohtang Pass, Solang Valley and Atul Tunnel were easily accessible, allowing me to explore the natural beauty of the region with ease. I will certainly look to stay at Matsya  Manali again on my next visit to Manali to soak in the serenity.",
         designation: "Social Media Inflencer",
         image: influencersImages?.ajju,
     },
     {
-        name: "Anunay Sood",
-        words: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        name: "Ashna Chand",
+        words: "I really enjoyed my stay at Matsya Manali. The views from my room overlooking the apple orchards were gorgeous. The food at the in-house restaurant was delicious and the staff provided excellent service. What struck me most was the hotel's charming location surrounded by orchards. I can't wait to return during the winter to see the breathtaking views with the orchards covered in a blanket of snow. I will surely visit again.",
         designation: "Social Media Inflencer",
-        image: influencersImages?.anunay,
+        image: influencersImages?.ashna,
     }
 ]
 

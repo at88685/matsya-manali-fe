@@ -4,6 +4,7 @@ import { Box, Grid } from '@mui/material'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { strings } from '../Constants/Strings';
+import { images } from '../Constants/ImagesList';
 
 const About = () => {
   const [aboutUsRef, useAboutUsRef] = useInView({
@@ -29,7 +30,6 @@ const About = () => {
             animate={useAboutUsRef ? "visible" : "hidden"}
             variants={aboutUsFadeUpVariant}
             transition={{ ease: "linear", duration: 1.5, x: { duration: 1 } }}
-
           >Matsya Manali, a tranquil retreat nestled in the heart of the picturesque town of Manali , Himanchal Pradesh .
             Our hotel is ideally located to offer you breathtaking views of the majestic Himalayas,
             lush green valleys, and the glistening Beas River, providing a truly enchanting experience
@@ -48,7 +48,6 @@ const About = () => {
             while soaking in the panoramic views of the surrounding mountains.
           </motion.div>
         </Box>
-
       </Grid>
     </div>
   )

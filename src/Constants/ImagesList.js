@@ -36,10 +36,10 @@ export const BalconyViewImagesList = [
 ]
 
 export const roomImages = {
-    rohtangView: require('../assets/images/hotelImages/roomImages/rohtang.jpg'),
-    sohtangView: require('../assets/images/hotelImages/roomImages/solang.jpg'),
-    valleyView: require('../assets/images/hotelImages/roomImages/valley.jpg'),
-    duplexView: require('../assets/images/hotelImages/roomImages/duplex.jpg'),
+    rohtangView: require('../assets/images/hotelImages/roomImages/rohtang.webp'),
+    sohtangView: require('../assets/images/hotelImages/roomImages/solang.webp'),
+    valleyView: require('../assets/images/hotelImages/roomImages/valley.webp'),
+    duplexView: require('../assets/images/hotelImages/roomImages/duplex.webp'),
 }
 
 export const images = {
@@ -55,7 +55,7 @@ export const images = {
 };
 export const headerLogo = require('../assets/images/logo/2.png');
 export const influencersImages = {
-    kritiMehra:require("../assets/images/influencers/kriti_mehra.jpeg"),
-    ajju:require("../assets/images/influencers/ajju.jpeg"),
-    anunay:require("../assets/images/influencers/anunay.jpeg")
+    kritiMehra:require("../assets/images/influencers/kriti_mehra.webp"),
+    ajju:require("../assets/images/influencers/ajju.webp"),
+    ashna:require("../assets/images/influencers/ashna_chand.webp"),
 };

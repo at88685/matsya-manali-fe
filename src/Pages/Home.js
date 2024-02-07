@@ -6,7 +6,8 @@ import './Styles/home.css'
 import { motion } from "framer-motion";
 import { strings } from "../Constants/Strings";
 import { Snowfall } from "react-snowfall";
-import FrontVideo from "../assets/video/frontVideo.mp4"
+import FrontVideo from "../assets/video/frontVideo.mp4";
+import MatsyaManaliVideo from "../assets/video/matsyaManaliVideo.mp4"
 
 const TransparentOverlay = styled("div")({
   position: "absolute",
@@ -14,7 +15,7 @@ const TransparentOverlay = styled("div")({
   left: 0,
   width: "100%",
   height: "100vh",
-  background: "rgba(0, 0, 0, 0.3)",
+  background: "rgba(0, 0, 0, 0.2)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -28,9 +29,9 @@ const Text = styled("div")({
 
 const Home = () => {
   const [showMainContent, setShowMainContent] = useState(false);
-  const [showSnow, setShowSnow] = useState(true);
+  const [showSnow, setShowSnow] = useState(false);
   const [onLoading, setonLoading] = useState(false);
-  const imagesList = InsideImagesList
+  const imagesList = InsideImagesList;
   const openVirtualSite = () => {
     window.open("https://dotcomsolutions.in/matsya-manali/", "_black", "noreferrer");
   }
@@ -39,7 +40,7 @@ const Home = () => {
   }
   useEffect(() => {
     setShowMainContent(true);
-    return;
+    return ()=>{};
   }, []);
 
   const deluxFadeDownVariants = {
@@ -54,7 +55,7 @@ const Home = () => {
     <Box height="100vh" id='homeid'>
       {
         // onLoading &&
-        <video src={FrontVideo} loop autoPlay={true} muted style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}></video>
+        <video src={MatsyaManaliVideo} loop autoPlay={true} muted style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}></video>
       }
       {
         showSnow &&
@@ -73,14 +74,14 @@ const Home = () => {
             <div className='welcomeToMatsyaManaliText'>{strings.matsyaManali}</div>
             <div className='discoverGreatnessText'>{strings.matsyaManaliDesc}</div>
           </Text>
-          <Button variant='outlined' sx={{
+          {/* <Button variant='outlined' sx={{
             color: 'white',
             ":hover": {
               color: '#9D42DA',
               backgroundColor: 'white'
             },
             marginTop: '15px'
-          }} onClick={openVirtualSite}>{strings.exploreVirtually}</Button>
+          }} onClick={openVirtualSite}>{strings.exploreVirtually}</Button> */}
           <Text>
             <div className="bookNowText" onClick={openMmtLink}>{strings.bookNow.toUpperCase()}</div>
           </Text>

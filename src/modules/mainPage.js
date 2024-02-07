@@ -20,18 +20,16 @@ const MainPage = () => {
             <div style={{
                 overflowX: "hidden"
             }} >
-                 
+                <Navbar />
+                <Home />
+                <Rooms />
+                <RoomServ />
+                <Aminities />
+                <Gallery />
+                <Testimonials />
+                <About />
+                <Footer />
             </div>
-            <Navbar />
-            <Home />
-            <Rooms />
-            <RoomServ />
-            <Aminities />
-            <Gallery />
-            <Testimonials />
-            <About />
-            <Footer />
-            
         </>
     )
 }

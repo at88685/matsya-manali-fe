@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Styles/rooms.css";
 import { RoomsSeperated } from "../Constants/RoomsList";
 import { SpecialRoom } from "../Constants/RoomsList";
