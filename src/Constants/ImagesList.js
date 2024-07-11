@@ -55,7 +55,16 @@ export const images = {
 };
 export const headerLogo = require('../assets/images/logo/2.png');
 export const influencersImages = {
-    kritiMehra:require("../assets/images/influencers/kriti_mehra.webp"),
-    ajju:require("../assets/images/influencers/ajju.webp"),
-    ashna:require("../assets/images/influencers/ashna_chand.webp"),
+    kritiMehra: require("../assets/images/influencers/kriti_mehra.webp"),
+    ajju: require("../assets/images/influencers/ajju.webp"),
+    ashna: require("../assets/images/influencers/ashna_chand.webp"),
 };
+
+export const logos = {
+    agoda: require('../assets/images/logo/agodaLogo.png'),
+    booking: require('../assets/images/logo/booking.png'),
+    easeMyTrip: require('../assets/images/logo/easeMyTrip.png'),
+    goIbibo: require('../assets/images/logo/goIbiboLogo.png'),
+    wego: require('../assets/images/logo/wego.png'),
+    makeMyTrip: require("../assets/images/logo/makeMyTripIcon.png")
+}

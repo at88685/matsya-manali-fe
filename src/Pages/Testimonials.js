@@ -11,10 +11,10 @@ const Card = (props) => {
     return (
         <div className="cardMainContainer">
             <div className="influencerCard">
-                <img src={props.images} className="influencersImage"/>
+                <img src={props.images} className="influencersImage" />
                 <div className="nameStyling">{props.name}</div>
                 <div className="designationStyling">{props.designation}</div>
-                <Rating name="read-only" value={5} readOnly size="medium"/>
+                <Rating name="read-only" value={5} readOnly size="medium" />
                 <div className="wordsStyling">{props.words}</div>
             </div>
         </div>
@@ -23,7 +23,7 @@ const Card = (props) => {
 
 const infulencersArray = [
     {
-        name: "Kriti Mehra",
+        name: "Kirti Mehra",
         words: "Breathtaking views from our room along with superb hospitality made our stay at Matsya Manali truly memorable. The bonfire night event was a highlight for us, we haven’t experienced it at any hotel I stayed at. Excellent service and atmosphere - we'll certainly return!",
         designation: "Social Media Inflencer",
         image: influencersImages?.kritiMehra,
@@ -48,17 +48,17 @@ const Testimonials = () => {
             <div className="testimonials-container">
                 <div className="titleContainer">
                     <div className="servicesText">{strings.celebrityGuests}</div>
-                    <div className="divider"/>
+                    <div className="divider" />
                 </div>
-                    <Slider dots autoplay pauseOnHover={false} pauseOnDotsHover={false} lazyLoad="anticipated" adaptiveHeight arrows={false}>
-                        {
-                            infulencersArray?.map((item, index) => {
-                                return (
-                                    <Card images={item?.image} words={item?.words} name={item?.name} designation={item?.designation}/>
-                                )
-                            })
-                        }
-                    </Slider>
+                <Slider dots autoplay pauseOnHover={false} pauseOnDotsHover={false} lazyLoad="anticipated" adaptiveHeight arrows={false}>
+                    {
+                        infulencersArray?.map((item, index) => {
+                            return (
+                                <Card images={item?.image} words={item?.words} name={item?.name} designation={item?.designation} />
+                            )
+                        })
+                    }
+                </Slider>
             </div>
         </>
     )
