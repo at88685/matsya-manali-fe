@@ -6,11 +6,8 @@ import './Styles/home.css'
 import { motion } from "framer-motion";
 import { strings } from "../Constants/Strings";
 import { Snowfall } from "react-snowfall";
-import FrontVideo from "../assets/video/frontVideo.mp4";
-import MatsyaManaliVideo from "../assets/video/matsyaManaliVideo.mp4"
+import MatsyaManaliNewVideo from "../assets/video/matsyaManaliVideoNew.mp4";
 import "../Components/styles/navbar.css"
-import CloseIcon from '@mui/icons-material/Close'
-import { AppContext } from "../utils/context";
 
 const TransparentOverlay = styled("div")({
   position: "absolute",
@@ -106,7 +103,7 @@ const Home = () => {
     <Box height="100vh" id='homeid'>
       {
         // onLoading &&
-        <video src={MatsyaManaliVideo} autoPlay={true} loop={true} playsInline={true} muted={true} controls={false} style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}></video>
+        <video src={MatsyaManaliNewVideo} autoPlay={true} loop={true} playsInline={true} muted={true} controls={false} style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}></video>
       }
       {
         showSnow &&
@@ -125,17 +122,20 @@ const Home = () => {
             <div className='welcomeToMatsyaManaliText'>{strings.matsyaManali}</div>
             <div className='discoverGreatnessText'>{strings.matsyaManaliDesc}</div>
           </Text>
-          {/* <Button variant='outlined' sx={{
-            color: 'white',
-            ":hover": {
+          <Button variant='outlined'
+            size={"large"}
+            sx={{
               color: '#9D42DA',
-              backgroundColor: 'white'
-            },
-            marginTop: '15px'
-          }} onClick={openVirtualSite}>{strings.exploreVirtually}</Button> */}
-          <Text>
+              backgroundColor: 'white',
+              ":hover": {
+                color: '#9D42DA',
+                backgroundColor: 'white'
+              },
+              marginTop: '15px',
+            }} onClick={() => setOpenBookNowModal(true)} className="bookNowText">{strings.bookNow.toUpperCase()}</Button>
+          {/* <Text>
             <div className="bookNowText" onClick={() => setOpenBookNowModal(true)}>{strings.bookNow.toUpperCase()}</div>
-          </Text>
+          </Text> */}
         </motion.div>
         {/* {
           showSnow &&
@@ -196,9 +196,10 @@ const Home = () => {
       <Modal
         open={openBookNowModal}
         onClose={() => setOpenBookNowModal(false)}
-        style={{ display: 'flex', flexDirection: "column", justifyContent: "center", alignItems: 'center' }}
+        style={{ display: 'flex', flexDirection: "column", justifyContent: "start", alignItems: 'flex-end', backgroundColor: 'transparent', paddingTop: '40px', paddingRight: '40px' }}
       >
-        <Box component={"div"} className='partnersMainContainer'>
+        <>
+          {/* <Box component={"div"} className='partnersMainContainer'>
           <Box component={"div"} onClick={() => setOpenBookNowModal(false)}>
             <CloseIcon />
           </Box>
@@ -206,7 +207,7 @@ const Home = () => {
             {
               partnersArray?.map((item, index) => {
                 return (
-                  <Box component="div" style={{ display: 'flex', flexDirection: 'row', width: "40%", justifyContent: "center", alignItems: "center" }}>
+                  <Box component="div" style={{ display: 'flex', flexDirection: 'row', width: "40%", justifyContent: "center", alignItems: "center", cursor: 'pointer' }}>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: '10px 10px' }} onClick={() => onClickPartners(index)}>
                       <img src={item?.image} className='partnersImage' />
                       <Typography component={"text"} className='partnersName'>{item?.desc}</Typography>
@@ -223,9 +224,17 @@ const Home = () => {
               })
             }
           </Box>
-        </Box>
+        </Box> */}
+          {
+            partnersArray?.map((item, index) => {
+              return (
+                <img src={item?.image} className="partnerImage" style={{ animationDelay: `${index * 0.1}s` }} onClick={() => onClickPartners(index)}></img>
+              )
+            })
+          }
+        </>
       </Modal>
-    </Box>
+    </Box >
   );
 };
 

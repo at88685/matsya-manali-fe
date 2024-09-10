@@ -130,6 +130,40 @@
   text-align: center;
 }
 
+.partnerImage {
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: 0.3s ease-in-out slideIn;
+  animation-fill-mode: forwards;
+  opacity: 0
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.partnerSideNavImage {
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: 0.3s ease-in-out slideIn;
+  animation-fill-mode: forwards;
+  opacity: 0
+}
+
 @media screen and (max-width:500px) {
   .partnersMainContainer {
     width: 80%;

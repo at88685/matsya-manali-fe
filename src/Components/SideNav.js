@@ -27,6 +27,18 @@ const SideNav = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [openBookNowModal, setOpenBookNowModal] = useState(false);
   const { contextState, setContextState } = useContext(AppContext);
+  const [modalCoordinates, setModalCoordinates] = useState({ x: 0, y: 0 });
+  console.log(modalCoordinates, "modalCoordinatesmodalCoordinates")
+  const handleClickEvent = (event) => {
+    console.log(event, "eventeventeventevent")
+    const coordinates = {
+      x: event.clientX,
+      y: event.clientY,
+    };
+    setModalCoordinates(coordinates);
+    // setOpenDrawer(false);
+    setOpenBookNowModal((prev) => !prev);
+  };
 
 
   // useEffect(() => {
@@ -101,6 +113,12 @@ const SideNav = () => {
     }
   }
 
+  const sideNavBarBookNowFunc = () => {
+    if (openBookNowModal) {
+      setOpenBookNowModal((prev) => !prev)
+    }
+  }
+
   return (
     <>
       <Drawer
@@ -109,6 +127,7 @@ const SideNav = () => {
         onClose={() => {
           setOpenDrawer(false);
         }}
+        onClick={sideNavBarBookNowFunc}
         PaperProps={{
           sx: {
             width: "100%",
@@ -195,13 +214,45 @@ const SideNav = () => {
             // to="footerid"
             smooth={true}
             duration={600}
-            onClick={() => {
-              setOpenDrawer(false);
-              setOpenBookNowModal(true)
-            }}
+            // onClick={() => {
+            //   setOpenDrawer(false);
+            //   setOpenBookNowModal(true)
+            // }}
+            onClick={handleClickEvent}
           >
             <ListItemText>Book Now</ListItemText>
           </Link>
+          {
+            openBookNowModal &&
+            <Box
+              component={'div'}
+              style={{
+                borderRadius: '10px',
+                color: 'white',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                overflowY: 'scroll'
+                // top: `${modalCoordinates.y}px`,
+                // left: `${modalCoordinates.x}px`,
+              }}
+            >
+              {/* Your modal content */}
+              {
+                partnersArray?.map((item, index) =>
+                (
+                  <img
+                    key={index}
+                    src={item?.image}
+                    className="partnerSideNavImage"
+                    style={{ animationDelay: `${index * 0.1}s`, marginTop: "10px" }}
+                    onClick={() => onClickPartners(index)}
+                  />
+                )
+                )
+              }
+            </Box>
+          }
 
           {/* <ClickAwayListener onClickAway={handleClickAway}>
             <div >
@@ -265,7 +316,6 @@ const SideNav = () => {
               </MenuItem>
             </Menu>
           </div> */}
-
         </List>
       </Drawer>
 
@@ -277,38 +327,48 @@ const SideNav = () => {
         <MenuRoundedIcon style={{ color: contextState?.isScrolled ? "black" : "white" }} />
         {/* <DensityMediumIcon color='white' /> */}
       </IconButton>
-      <Modal
+      {/* <Modal
         open={openBookNowModal}
         onClose={() => setOpenBookNowModal(false)}
-        style={{ display: 'flex', flexDirection: "column", justifyContent: "center", alignItems: 'center' }}
-      >
-        <Box component={"div"} className='partnersMainContainer'>
-          <Box component={"div"} onClick={() => setOpenBookNowModal(false)}>
-            <CloseIcon />
-          </Box>
-          <Box component="div" className='partnersInsideContainer'>
-            {
-              partnersArray?.map((item, index) => {
-                return (
-                  <Box component="div" style={{ display: 'flex', flexDirection: 'row', width: "40%", justifyContent: "center", alignItems: "center" }}>
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: '10px 10px' }} onClick={() => onClickPartners(index)}>
-                      <img src={item?.image} className='partnersImage' />
-                      <Typography component={"text"} className='partnersName'>{item?.desc}</Typography>
-                    </div>
-                    {
-                      (index + 1 % 2) == 0 &&
-                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: '10px 10px' }} onClick={() => onClickPartners(index + 1)}>
-                        <img src={partnersArray?.[index + 1]?.item?.image} className='partnersImage' />
-                        <Typography component={"text"} className='partnersName'>{partnersArray?.[index + 1]?.item?.desc}</Typography>
-                      </div>
-                    }
-                  </Box>
-                )
-              })
-            }
-          </Box>
-        </Box>
-      </Modal>
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'transparent',
+        }}
+      > */}
+      {
+        // openBookNowModal &&
+        // <Box
+        //   component={'div'}
+        //   style={{
+        //     padding: '20px',
+        //     borderRadius: '10px',
+        //     color: 'white',
+        //     display: 'flex',
+        //     flexDirection: 'column',
+        //     top: `${modalCoordinates.y}px`,
+        //     left: `${modalCoordinates.x}px`,
+        //     backgroundColor: 'red'
+        //   }}
+        // >
+        //   {/* Your modal content */}
+        //   {
+        //     partnersArray?.map((item, index) =>
+        //     (
+        //       <img
+        //         key={index}
+        //         src={item?.image}
+        //         className="partnerSideNavImage"
+        //         style={{ animationDelay: `${index * 0.1}s`, marginTop: "10px" }}
+        //         onClick={() => onClickPartners(index)}
+        //       />
+        //     )
+        //     )
+        //   }
+        // </Box>
+      }
+      {/* </Modal> */}
     </>
   );
 };

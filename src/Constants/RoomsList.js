@@ -3,7 +3,7 @@ import { roomImages } from "./ImagesList"
 export const SpecialRoom = {
     title: 'Duplex',
     image: roomImages.duplexView,
-    description: 'Nestled within our Duplex Rooms at Matsya Manali is an enchanting expanse designed to accommodate up to four discerning guests with seamless grace. This beguiling haven not only exudes comfort and charm but also generously offers ample space, embracing each visitor with a cocoon of intimacy and extravagance. From couples seeking a romantic escapade to families yearning for unforgettable bonding moments, our Duplex Rooms extend an invitation to create cherished memories amidst the breathtaking beauty of Manali.'
+    description: 'Nestled within our Duplex Rooms at Matsya Manali is an enchanting expanse designed to accommodate up to four discerning guests with seamless grace. This beguiling haven not only exudes comfort and charm but also generously offers ample space, embracing each visitor with a cocoon of extravagance. From couples seeking a romantic escapade to families yearning for unforgettable bonding moments, our Duplex Rooms extend an invitation to create cherished memories amidst the breathtaking beauty of Manali.'
 }
 
 export const RoomsSeperated = {

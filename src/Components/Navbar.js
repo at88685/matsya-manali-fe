@@ -256,9 +256,11 @@ const Navbar = () => {
             <Modal
                 open={openBookNowModal}
                 onClose={() => setOpenBookNowModal(false)}
-                style={{ display: 'flex', flexDirection: "column", justifyContent: "center", alignItems: 'center' }}
+                disableAutoFocus={true}
+                style={{ display: 'flex', flexDirection: "column", justifyContent: "start", alignItems: 'flex-end', backgroundColor: 'transparent', paddingTop: '40px', paddingRight: '40px' }}
             >
-                <Box component={"div"} className='partnersMainContainer'>
+                <>
+                    {/* <Box component={"div"} className='partnersMainContainer'>
                     <Box component={"div"} onClick={() => setOpenBookNowModal(false)}>
                         <CloseIcon />
                     </Box>
@@ -266,7 +268,7 @@ const Navbar = () => {
                         {
                             partnersArray?.map((item, index) => {
                                 return (
-                                    <Box component="div" style={{ display: 'flex', flexDirection: 'row', width: "40%", justifyContent: "center", alignItems: "center" }}>
+                                    <Box component="div" style={{ display: 'flex', flexDirection: 'row', width: "40%", justifyContent: "center", alignItems: "center", cursor: 'pointer' }}>
                                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: '10px 10px' }} onClick={() => onClickPartners(index)}>
                                             <img src={item?.image} className='partnersImage' />
                                             <Typography component={"text"} className='partnersName'>{item?.desc}</Typography>
@@ -283,7 +285,15 @@ const Navbar = () => {
                             })
                         }
                     </Box>
-                </Box>
+                </Box> */}
+                    {
+                        partnersArray?.map((item, index) => {
+                            return (
+                                <img src={item?.image} className="partnerImage" style={{ animationDelay: `${index * 0.1}s` }} onClick={() => onClickPartners(index)} />
+                            )
+                        })
+                    }
+                </>
             </Modal>
         </TransparentAppBar >
     )

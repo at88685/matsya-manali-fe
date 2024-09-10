@@ -75,12 +75,35 @@
   margin-top: 25px;
 }
 
-.bookNowText{
+.bookNowText {
   color: white;
   font-family: 'Ysabeau SC', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 2rem;
   cursor: pointer;
+}
+
+.partnerImage {
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: 0.3s ease-in-out slideIn;
+  animation-fill-mode: forwards;
+  opacity: 0
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 768px) {

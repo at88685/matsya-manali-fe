@@ -1,0 +1,40 @@
+.fillDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fillDetailsMainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 15px 15px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    /* background-image: url("../assets/images/hotelImages/OutsideImages/OutsideImage5.jpg"); */
+    /* background-image: url('../assets/images/logo/matsya_manali_opacity_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+}
+
+.fillDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 10px; */
+    /* background-color: white;  */
+    /* width: 400px; */
+    /* padding: 0px 10px; */
+    border-radius: 10px;
+}
+
+.hotelImageContainer {
+    width: 40%;
+    height: 90%;
+}
